@@ -1,0 +1,7 @@
+.header {
+    padding: 1em 0;
+}
+
+.header-container {
+    @extend %grid;
+}

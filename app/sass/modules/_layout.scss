@@ -1,0 +1,25 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.main {
+    @extend %grid;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: white;
+}
+
+
+.intro {
+    height: 50%;
+    background: url('http://lorempixel.com/1200/300/abstract/') center center no-repeat transparent;
+    background-size: cover;
+}

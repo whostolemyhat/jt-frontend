@@ -12,6 +12,7 @@ select,
 textarea {
     @include px('font-size', ($baseFontSize * 1px)); 
     font-family: $baseFontFamily;
+    color: $baseFontColour;
 }
 
 body {
@@ -28,7 +29,7 @@ h4,
 h5, 
 h6 {
     font-family: $headingFontFamily; 
-    color: $headingColor;
+    color: $headingColour;
     font-weight: bold;
 }
 
@@ -66,7 +67,7 @@ h6,
    ========================================================================== */
 
 a { 
-    color: $linkColor; 
+   color: $linkColour; 
     background: transparent;
 }
 
