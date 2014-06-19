@@ -38,6 +38,10 @@ h1,
     @include px('font-size', $headingAlpha); 
 }
 
+.mega {
+  @include px('font-size', 160px);
+}
+
 h2, 
 .beta {
     @include px('font-size', $headingBeta);
@@ -86,4 +90,8 @@ a:focus {
 
 a:active { 
     color: $linkActive; 
+}
+
+p {
+  @include rem('margin', 0 0 1.5rem);
 }

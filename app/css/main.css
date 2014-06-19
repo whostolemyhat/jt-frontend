@@ -8,7 +8,7 @@
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 22, ../sass/base/_normalise.scss */
+/* line 11, ../sass/base/_normalise.scss */
 article,
 aside,
 details,
@@ -26,7 +26,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-/* line 32, ../sass/base/_normalise.scss */
+/* line 30, ../sass/base/_normalise.scss */
 audio,
 canvas,
 video {
@@ -45,7 +45,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-/* line 52, ../sass/base/_normalise.scss */
+/* line 51, ../sass/base/_normalise.scss */
 [hidden],
 template {
   display: none; }
@@ -94,7 +94,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 105, ../sass/base/_normalise.scss */
+/* line 104, ../sass/base/_normalise.scss */
 a:active,
 a:hover {
   outline: 0; }
@@ -121,7 +121,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 136, ../sass/base/_normalise.scss */
+/* line 135, ../sass/base/_normalise.scss */
 b,
 strong {
   font-weight: bold; }
@@ -153,7 +153,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 174, ../sass/base/_normalise.scss */
+/* line 171, ../sass/base/_normalise.scss */
 code,
 kbd,
 pre,
@@ -185,7 +185,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 208, ../sass/base/_normalise.scss */
+/* line 207, ../sass/base/_normalise.scss */
 sub,
 sup {
   font-size: 75%;
@@ -256,7 +256,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 288, ../sass/base/_normalise.scss */
+/* line 285, ../sass/base/_normalise.scss */
 button,
 input,
 select,
@@ -272,7 +272,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 300, ../sass/base/_normalise.scss */
+/* line 299, ../sass/base/_normalise.scss */
 button,
 input {
   line-height: normal; }
@@ -283,7 +283,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 312, ../sass/base/_normalise.scss */
+/* line 311, ../sass/base/_normalise.scss */
 button,
 select {
   text-transform: none; }
@@ -295,7 +295,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 327, ../sass/base/_normalise.scss */
+/* line 324, ../sass/base/_normalise.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -308,7 +308,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 337, ../sass/base/_normalise.scss */
+/* line 336, ../sass/base/_normalise.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -317,7 +317,7 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 347, ../sass/base/_normalise.scss */
+/* line 346, ../sass/base/_normalise.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -343,7 +343,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 371, ../sass/base/_normalise.scss */
+/* line 370, ../sass/base/_normalise.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -351,7 +351,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 380, ../sass/base/_normalise.scss */
+/* line 379, ../sass/base/_normalise.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -388,7 +388,7 @@ table {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 10, ../sass/base/_print.scss */
+  /* line 9, ../sass/base/_print.scss */
   a,
   a:visited {
     text-decoration: underline; }
@@ -404,13 +404,13 @@ table {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 28, ../sass/base/_print.scss */
+  /* line 26, ../sass/base/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
 
-  /* line 33, ../sass/base/_print.scss */
+  /* line 32, ../sass/base/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
@@ -421,7 +421,7 @@ table {
     display: table-header-group;
     /* h5bp.com/t */ }
 
-  /* line 43, ../sass/base/_print.scss */
+  /* line 42, ../sass/base/_print.scss */
   tr,
   img {
     page-break-inside: avoid; }
@@ -432,15 +432,14 @@ table {
 
   @page {
     margin: 0.5cm; }
-
-  /* line 57, ../sass/base/_print.scss */
+  /* line 55, ../sass/base/_print.scss */
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 63, ../sass/base/_print.scss */
+  /* line 62, ../sass/base/_print.scss */
   h2,
   h3 {
     page-break-after: avoid; } }
@@ -472,7 +471,7 @@ table {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 17, ../sass/base/_helpers.scss */
+/* line 16, ../sass/base/_helpers.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -497,7 +496,7 @@ table {
    ========================================================================== */
 /* Base
    ========================================================================== */
-/* line 12, ../sass/modules/_typography.scss */
+/* line 8, ../sass/modules/_typography.scss */
 html,
 button,
 input,
@@ -515,7 +514,7 @@ body {
 
 /* Headings
    ========================================================================== */
-/* line 30, ../sass/modules/_typography.scss */
+/* line 25, ../sass/modules/_typography.scss */
 h1,
 h2,
 h3,
@@ -526,37 +525,42 @@ h6 {
   color: #222222;
   font-weight: bold; }
 
-/* line 37, ../sass/modules/_typography.scss */
+/* line 36, ../sass/modules/_typography.scss */
 h1,
 .alpha {
   font-size: 60px;
   font-size:  3.75rem; }
 
-/* line 42, ../sass/modules/_typography.scss */
+/* line 41, ../sass/modules/_typography.scss */
+.mega {
+  font-size: 160px;
+  font-size:  10rem; }
+
+/* line 45, ../sass/modules/_typography.scss */
 h2,
 .beta {
   font-size: 24px;
   font-size:  1.5rem; }
 
-/* line 47, ../sass/modules/_typography.scss */
+/* line 50, ../sass/modules/_typography.scss */
 h3,
 .gamma {
   font-size: 19px;
   font-size:  1.1875rem; }
 
-/* line 52, ../sass/modules/_typography.scss */
+/* line 55, ../sass/modules/_typography.scss */
 h4,
 .delta {
   font-size: 16px;
   font-size:  1rem; }
 
-/* line 57, ../sass/modules/_typography.scss */
+/* line 60, ../sass/modules/_typography.scss */
 h5,
 .epsilon {
   font-size: 13px;
   font-size:  0.8125rem; }
 
-/* line 62, ../sass/modules/_typography.scss */
+/* line 65, ../sass/modules/_typography.scss */
 h6,
 .zeta {
   font-size: 11px;
@@ -564,27 +568,32 @@ h6,
 
 /* Links
    ========================================================================== */
-/* line 69, ../sass/modules/_typography.scss */
+/* line 73, ../sass/modules/_typography.scss */
 a {
   color: #d90a1a;
   background: transparent; }
 
-/* line 74, ../sass/modules/_typography.scss */
+/* line 78, ../sass/modules/_typography.scss */
 a:visited {
   color: #f52132; }
 
-/* line 78, ../sass/modules/_typography.scss */
+/* line 82, ../sass/modules/_typography.scss */
 a:hover {
   color: #77060e; }
 
-/* line 82, ../sass/modules/_typography.scss */
+/* line 86, ../sass/modules/_typography.scss */
 a:focus {
   outline: thin dotted;
   color: #160103; }
 
-/* line 87, ../sass/modules/_typography.scss */
+/* line 91, ../sass/modules/_typography.scss */
 a:active {
   color: #77060e; }
+
+/* line 95, ../sass/modules/_typography.scss */
+p {
+  margin:  0 0 24px;
+  margin: 0 0 1.5rem; }
 
 /* line 1, ../sass/modules/_layout.scss */
 * {
@@ -592,7 +601,7 @@ a:active {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 12, ../sass/modules/_layout.scss */
+/* line 11, ../sass/modules/_layout.scss */
 html,
 body {
   height: 100%; }
@@ -601,11 +610,19 @@ body {
 body {
   background: white; }
 
-/* line 21, ../sass/modules/_layout.scss */
+/* line 25, ../sass/modules/_layout.scss */
 .intro {
   height: 50%;
-  background: url("http://lorempixel.com/1200/300/abstract/") center center no-repeat transparent;
-  background-size: cover; }
+  background: url("/img/bg.png") 0 0 no-repeat transparent;
+  background-size: cover;
+  text-align: center;
+  display: table;
+  width: 100%; }
+  /* line 33, ../sass/modules/_layout.scss */
+  .intro .mega {
+    color: white;
+    display: table-cell;
+    vertical-align: middle; }
 
 /* line 1, ../sass/modules/_header.scss */
 .header {
@@ -624,3 +641,92 @@ body {
   float: left;
   text-align: center;
   background: url("http://lorempixel.com/600/400/abstract/") center center repeat transparent; }
+
+/* line 1, ../sass/modules/_loading.scss */
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: none;
+  margin: 1rem auto; }
+
+/* line 9, ../sass/modules/_loading.scss */
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #d90a1a;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  -moz-animation: bounce 2s infinite ease-in-out;
+  -ms-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out; }
+
+/* line 22, ../sass/modules/_loading.scss */
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  -moz-animation-delay: -1s;
+  -o-animation-delay: -1s;
+  -ms-animation-delay: -1s;
+  animation-delay: -1s; }
+
+@-webkit-keyframes bounce {
+  /* line 31, ../sass/modules/_loading.scss */
+  0%, 100% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+
+  /* line 35, ../sass/modules/_loading.scss */
+  50% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@-moz-keyframes bounce {
+  /* line 31, ../sass/modules/_loading.scss */
+  0%, 100% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+
+  /* line 35, ../sass/modules/_loading.scss */
+  50% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@-ms-keyframes bounce {
+  /* line 31, ../sass/modules/_loading.scss */
+  0%, 100% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+
+  /* line 35, ../sass/modules/_loading.scss */
+  50% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@keyframes bounce {
+  /* line 31, ../sass/modules/_loading.scss */
+  0%, 100% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+
+  /* line 35, ../sass/modules/_loading.scss */
+  50% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }

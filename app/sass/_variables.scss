@@ -8,6 +8,8 @@ $salem: #0b9b4a;
 $dustyGrey: #999;
 $mineShaft: #222;
 $gallery: #efefef;
+$monza: #d90a1a;
+
 
 /* Typography  */
 
@@ -27,7 +29,7 @@ $headingEpsilon:                13px;
 $headingZeta:                   11px;
 
 /* Links  */
-$linkColour: #d90a1a;
+$linkColour: $monza;
 $linkVisited: lighten($linkColour, 10);
 $linkHover: darken($linkColour, 20);
 $linkActive: darken($linkColour, 20);
