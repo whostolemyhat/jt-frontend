@@ -172,7 +172,25 @@
     #{$property}: $rem-values;
 }
 
+
+%no-style-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 %grid {
   max-width: 980px;
   margin: auto;
+}
+
+%clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }

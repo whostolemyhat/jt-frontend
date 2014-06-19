@@ -1,3 +1,7 @@
+.projects {
+    @extend %clearfix;
+}
+
 .project {
     width: 33%;
     min-height: 300px;

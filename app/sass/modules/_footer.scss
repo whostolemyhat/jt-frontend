@@ -1,9 +1,10 @@
 .footer {
-    background: $mineShaft;
+    background: url('/img/tile.png') 0 0 repeat $mineShaft;
     color: $gallery;
     padding: 1em 0;
 }
 
-.footer-container {
+.footer__container {
     @extend %grid;
+    @extend %clearfix;
 }

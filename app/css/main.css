@@ -454,10 +454,24 @@ table {
    ========================================================================== */
 /* Rem Fallbacks
    ========================================================================== */
-/* line 175, ../sass/base/_mixins.scss */
-.main, .header-container, .footer-container {
+/* line 176, ../sass/base/_mixins.scss */
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+/* line 182, ../sass/base/_mixins.scss */
+.main, .header__container, .footer__container {
   max-width: 980px;
   margin: auto; }
+
+/* line 188, ../sass/base/_mixins.scss */
+.nav ul:before, .footer__container:before, .projects:before, .nav ul:after, .footer__container:after, .projects:after {
+  content: "";
+  display: table; }
+/* line 193, ../sass/base/_mixins.scss */
+.nav ul:after, .footer__container:after, .projects:after {
+  clear: both; }
 
 /* Helpers */
 /*
@@ -571,26 +585,43 @@ h6,
 /* line 73, ../sass/modules/_typography.scss */
 a {
   color: #d90a1a;
-  background: transparent; }
+  background: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
 
-/* line 78, ../sass/modules/_typography.scss */
+/* line 81, ../sass/modules/_typography.scss */
+a:hover {
+  background: #d90a1a;
+  color: white;
+  text-decoration: none; }
+  /* line 86, ../sass/modules/_typography.scss */
+  a:hover img {
+    background: transparent; }
+
+/* line 91, ../sass/modules/_typography.scss */
 a:visited {
   color: #f52132; }
+  /* line 94, ../sass/modules/_typography.scss */
+  a:visited:hover {
+    color: white;
+    background: #f52132; }
+    /* line 98, ../sass/modules/_typography.scss */
+    a:visited:hover img {
+      background: transparent; }
 
-/* line 82, ../sass/modules/_typography.scss */
-a:hover {
-  color: #77060e; }
-
-/* line 86, ../sass/modules/_typography.scss */
+/* line 105, ../sass/modules/_typography.scss */
 a:focus {
   outline: thin dotted;
   color: #160103; }
 
-/* line 91, ../sass/modules/_typography.scss */
+/* line 110, ../sass/modules/_typography.scss */
 a:active {
   color: #77060e; }
 
-/* line 95, ../sass/modules/_typography.scss */
+/* line 114, ../sass/modules/_typography.scss */
 p {
   margin:  0 0 24px;
   margin: 0 0 1.5rem; }
@@ -628,13 +659,54 @@ body {
 .header {
   padding: 1em 0; }
 
+/* line 7, ../sass/modules/_nav.scss */
+.nav li {
+  width: 25%;
+  float: left;
+  text-align: center; }
+/* line 13, ../sass/modules/_nav.scss */
+.nav .nav__logo {
+  text-align: left; }
+/* line 17, ../sass/modules/_nav.scss */
+.nav a,
+.nav a:visited {
+  color: #d90a1a;
+  display: inline-block; }
+  /* line 22, ../sass/modules/_nav.scss */
+  .nav a:hover,
+  .nav a:visited:hover {
+    background: transparent;
+    color: #d90a1a;
+    text-decoration: none; }
+    /* line 27, ../sass/modules/_nav.scss */
+    .nav a:hover .nav__highlight,
+    .nav a:visited:hover .nav__highlight {
+      -webkit-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1); }
+
+/* line 34, ../sass/modules/_nav.scss */
+.nav__highlight {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #d90a1a;
+  -webkit-transition: all 0.12s ease-in-out;
+  -moz-transition: all 0.12s ease-in-out;
+  transition: all 0.12s ease-in-out;
+  -webkit-transform: scale(0, 1);
+  -moz-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1); }
+
 /* line 1, ../sass/modules/_footer.scss */
 .footer {
-  background: #222222;
+  background: url("/img/tile.png") 0 0 repeat #222222;
   color: #efefef;
   padding: 1em 0; }
 
-/* line 1, ../sass/modules/_projects.scss */
+/* line 5, ../sass/modules/_projects.scss */
 .project {
   width: 33%;
   min-height: 300px;

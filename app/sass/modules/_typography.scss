@@ -72,16 +72,35 @@ h6,
 
 a { 
    color: $linkColour; 
-    background: transparent;
-}
-
-a:visited { 
-    color: $linkVisited; 
+   background: transparent;
+   text-decoration: none;
+   font-weight: bold;
+   @include transition(all, 0.1s);
 }
 
 a:hover { 
-    color: $linkHover; 
+    background: $linkColour; 
+    color: white;
+    text-decoration: none;
+
+    img {
+        background: transparent;
+    }
 }
+
+a:visited {
+    color: $linkVisited;
+
+    &:hover {
+        color: white;
+        background: $linkVisited;
+
+        img {
+            background: transparent;
+        }
+    }
+}
+
 
 a:focus { 
     outline: thin dotted; 

@@ -1,0 +1,42 @@
+.nav {
+    ul {
+        @extend %no-style-list;
+        @extend %clearfix;
+    }
+
+    li {
+        width: 25%;
+        float: left;
+        text-align: center;
+    }
+
+    .nav__logo {
+        text-align: left;
+    }
+
+    a,
+    a:visited {
+        color: $linkColour;
+        display: inline-block;
+
+        &:hover {
+            background: transparent;
+            color: $linkColour;
+            text-decoration: none;
+
+            .nav__highlight {
+                @include transform(scale(1, 1));
+            }
+        }
+    }
+}
+
+.nav__highlight {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: $linkColour;
+
+    @include transition(all, 0.12s, ease-in-out);
+    @include transform(scale(0, 1));
+}
