@@ -40,3 +40,56 @@
     @include transition(all, 0.12s, ease-in-out);
     @include transform(scale(0, 1));
 }
+
+.nav__mobile-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav {
+        @include rem('padding', 0 1rem);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .nav {
+        li {
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav__logo {
+            text-align: center;
+            display: block;
+        }
+    }
+
+    .nav--active li {
+        display: block;
+    }
+
+    .nav__mobile-menu {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 2rem;
+        color: $mineShaft;
+
+        &:hover,
+        &.active {
+            color: $linkColour;
+            background: transparent;
+        }
+
+        &:visited {
+            color: $mineShaft;
+
+            &:hover {
+                color: $linkColour;
+            }
+        }
+    }
+}

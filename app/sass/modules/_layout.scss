@@ -34,5 +34,25 @@ body {
         color: white;
         display: table-cell;
         vertical-align: middle;
+        line-height: 1;
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+    .mega {
+        @include rem('font-size', 8rem);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .mega {
+        @include rem('font-size', 6rem);
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .mega {
+        @include rem('font-size', 4rem);
     }
 }

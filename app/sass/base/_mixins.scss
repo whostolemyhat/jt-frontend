@@ -184,6 +184,12 @@
   margin: auto;
 }
 
+@media only screen and (max-width: 980px) {
+  %grid {
+    @include rem('padding', 0 1rem);
+  }
+}
+
 %clearfix {
     &:before,
     &:after {

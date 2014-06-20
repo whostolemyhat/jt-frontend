@@ -465,11 +465,16 @@ table {
   max-width: 980px;
   margin: auto; }
 
-/* line 188, ../sass/base/_mixins.scss */
+@media only screen and (max-width: 980px) {
+  /* line 188, ../sass/base/_mixins.scss */
+  .main, .header__container, .footer__container {
+    padding:  0 16px;
+    padding: 0 1rem; } }
+/* line 194, ../sass/base/_mixins.scss */
 .nav ul:before, .footer__container:before, .projects:before, .nav ul:after, .footer__container:after, .projects:after {
   content: "";
   display: table; }
-/* line 193, ../sass/base/_mixins.scss */
+/* line 199, ../sass/base/_mixins.scss */
 .nav ul:after, .footer__container:after, .projects:after {
   clear: both; }
 
@@ -653,8 +658,24 @@ body {
   .intro .mega {
     color: white;
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    line-height: 1; }
 
+@media only screen and (max-width: 550px) {
+  /* line 43, ../sass/modules/_layout.scss */
+  .mega {
+    font-size:  128px;
+    font-size: 8rem; } }
+@media only screen and (max-width: 425px) {
+  /* line 49, ../sass/modules/_layout.scss */
+  .mega {
+    font-size:  96px;
+    font-size: 6rem; } }
+@media only screen and (max-width: 330px) {
+  /* line 55, ../sass/modules/_layout.scss */
+  .mega {
+    font-size:  64px;
+    font-size: 4rem; } }
 /* line 1, ../sass/modules/_header.scss */
 .header {
   padding: 1em 0; }
@@ -700,6 +721,48 @@ body {
   -ms-transform: scale(0, 1);
   transform: scale(0, 1); }
 
+/* line 44, ../sass/modules/_nav.scss */
+.nav__mobile-menu {
+  display: none; }
+
+@media only screen and (max-width: 1000px) {
+  /* line 49, ../sass/modules/_nav.scss */
+  .nav {
+    padding:  0 16px;
+    padding: 0 1rem; } }
+@media only screen and (max-width: 500px) {
+  /* line 57, ../sass/modules/_nav.scss */
+  .nav li {
+    display: none;
+    width: 100%;
+    text-align: center; }
+  /* line 63, ../sass/modules/_nav.scss */
+  .nav .nav__logo {
+    text-align: center;
+    display: block; }
+
+  /* line 69, ../sass/modules/_nav.scss */
+  .nav--active li {
+    display: block; }
+
+  /* line 73, ../sass/modules/_nav.scss */
+  .nav__mobile-menu {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    color: #222222; }
+    /* line 81, ../sass/modules/_nav.scss */
+    .nav__mobile-menu:hover, .nav__mobile-menu.active {
+      color: #d90a1a;
+      background: transparent; }
+    /* line 87, ../sass/modules/_nav.scss */
+    .nav__mobile-menu:visited {
+      color: #222222; }
+      /* line 90, ../sass/modules/_nav.scss */
+      .nav__mobile-menu:visited:hover {
+        color: #d90a1a; } }
 /* line 1, ../sass/modules/_footer.scss */
 .footer {
   background: url("/img/tile.png") 0 0 repeat #222222;
