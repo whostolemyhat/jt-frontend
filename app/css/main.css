@@ -461,13 +461,15 @@ table {
   list-style-type: none; }
 
 /* line 198, ../sass/base/_mixins.scss */
-.main, .header__container, .footer__container {
+.main,
+.about, .header__container, .footer__container {
   max-width: 980px;
   margin: auto; }
 
 @media only screen and (max-width: 980px) {
   /* line 204, ../sass/base/_mixins.scss */
-  .main, .header__container, .footer__container {
+  .main,
+  .about, .header__container, .footer__container {
     padding:  0 16px;
     padding: 0 1rem; } }
 /* line 210, ../sass/base/_mixins.scss */
@@ -637,16 +639,16 @@ p {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 11, ../sass/modules/_layout.scss */
+/* line 12, ../sass/modules/_layout.scss */
 html,
 body {
   height: 100%; }
 
-/* line 16, ../sass/modules/_layout.scss */
+/* line 17, ../sass/modules/_layout.scss */
 body {
   background: white; }
 
-/* line 25, ../sass/modules/_layout.scss */
+/* line 26, ../sass/modules/_layout.scss */
 .intro {
   height: 50%;
   background: url("/img/bg.png") 0 0 no-repeat transparent;
@@ -654,7 +656,7 @@ body {
   text-align: center;
   display: table;
   width: 100%; }
-  /* line 33, ../sass/modules/_layout.scss */
+  /* line 34, ../sass/modules/_layout.scss */
   .intro .mega {
     color: white;
     display: table-cell;
@@ -662,17 +664,17 @@ body {
     line-height: 1; }
 
 @media only screen and (max-width: 550px) {
-  /* line 43, ../sass/modules/_layout.scss */
+  /* line 44, ../sass/modules/_layout.scss */
   .mega {
     font-size:  128px;
     font-size: 8rem; } }
 @media only screen and (max-width: 425px) {
-  /* line 49, ../sass/modules/_layout.scss */
+  /* line 50, ../sass/modules/_layout.scss */
   .mega {
     font-size:  96px;
     font-size: 6rem; } }
 @media only screen and (max-width: 330px) {
-  /* line 55, ../sass/modules/_layout.scss */
+  /* line 56, ../sass/modules/_layout.scss */
   .mega {
     font-size:  64px;
     font-size: 4rem; } }
@@ -719,7 +721,7 @@ body {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #d90a1a;
+  background-color: #ffde17;
   -webkit-transition: all 0.12s ease-in-out;
   -moz-transition: all 0.12s ease-in-out;
   transition: all 0.12s ease-in-out;
@@ -1023,3 +1025,13 @@ body {
 /* line 1, ../sass/modules/_blog.scss */
 .blog .header {
   border-bottom: 3px solid #222222; }
+
+/* line 1, ../sass/modules/_about.scss */
+.about {
+  padding-top:  16px;
+  padding-top: 1rem;
+  padding-bottom:  16px;
+  padding-bottom: 1rem; }
+  /* line 5, ../sass/modules/_about.scss */
+  .about p {
+    margin: 0; }

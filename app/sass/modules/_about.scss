@@ -1,0 +1,8 @@
+.about {
+    @include rem('padding-top', 1rem);
+    @include rem('padding-bottom', 1rem);
+
+    p {
+        margin: 0;
+    }
+}
