@@ -1,11 +1,143 @@
 .projects {
     @extend %clearfix;
+    display: -webkit-box;
+    /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box;
+    /* OLD: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* MID: IE 10 */
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
 }
 
 .project {
-    width: 33%;
+    // width: 33%;
+}
+
+
+.project__name {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    background: transparent;
+    // background: rgba(255, 222, 23, 0.3); // candlelight
+    color: #fff;
+}
+
+.project {
+  // -webkit-box-sizing: border-box;
+  // -moz-box-sizing: border-box;
+  // -o-box-sizing: border-box;
+  // box-sizing: border-box;
+    @include box-sizing(border-box);
+    width: 33.3%;
     min-height: 300px;
     float: left;
     text-align: center;
-    background: url('http://lorempixel.com/600/400/abstract/') center center repeat transparent;
+  // height: 260px;
+  // margin-bottom: 1%;
+  // margin-right: 1%;
+    padding: 0;
+    // -webkit-perspective: 1000;
+    // -moz-perspective: 1000;
+    // -ms-perspective: 1000;
+    @include perspective(1000);
+    position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+    .project {
+        width: 33.2%;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .project {
+        width: 100%;
+    }
+}
+
+.project:hover .project__flipper {
+  // -webkit-transform: rotateY(180deg);
+  // -moz-transform: rotateY(180deg);
+  // -ms-transform: rotateY(180deg);
+  // -o-transform: rotateY(180deg);
+  // transform: rotateY(180deg);
+    @include transform(rotateY(180deg));
+}
+
+.project__front,
+.project__back {
+    width: 100%;
+    min-height: 300px;
+    // -webkit-backface-visibility: hidden;
+    // -moz-backface-visibility: hidden;
+    // -ms-backface-visibility: hidden;
+    // -o-backface-visibility: hidden;
+    @include backface-visibility(hidden);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project__front {
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+}
+
+.project__back {
+  // -webkit-transform: rotateY(180deg);
+  // -moz-transform: rotateY(180deg);
+  // -ms-transform: rotateY(180deg);
+  // -o-transform: rotateY(180deg);
+  @include transform(rotateY(180deg));
+
+  padding: 1em;
+  background: $candlelight;
+}
+
+.project__flipper {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 450ms;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 450ms;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 450ms;
+  -o-transform-style: preserve-3d;
+  -o-transition: 450ms;
+  transition: 450ms;
+  position: relative;
+}
+
+/* CSS updated */
+.navWrapper {
+  margin: 0 0 1em;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
+  text-align: center;
+}
+
+.navWrapper li {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.navWrapper a {
+  display: block;
+  padding: 0.5em 1em;
+  background: #eee;
+  border-radius: 2px;
+  margin: 0 0.5em;
+}
+
+.navWrapper .selected,
+#projects .navWrapper a:hover {
+  background: $monza;
+  color: white;
 }

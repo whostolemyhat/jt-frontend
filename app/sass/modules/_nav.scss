@@ -29,7 +29,18 @@
             }
         }
     }
+    
+    .nav__logo a {
+        font-size: $headingGamma;
+        color: $mineShaft;
+        
+        &:hover {
+            color: $linkColour;
+        }
+    }
 }
+
+
 
 .nav__highlight {
     display: block;

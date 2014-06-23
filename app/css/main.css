@@ -454,27 +454,27 @@ table {
    ========================================================================== */
 /* Rem Fallbacks
    ========================================================================== */
-/* line 176, ../sass/base/_mixins.scss */
+/* line 192, ../sass/base/_mixins.scss */
 .nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none; }
 
-/* line 182, ../sass/base/_mixins.scss */
+/* line 198, ../sass/base/_mixins.scss */
 .main, .header__container, .footer__container {
   max-width: 980px;
   margin: auto; }
 
 @media only screen and (max-width: 980px) {
-  /* line 188, ../sass/base/_mixins.scss */
+  /* line 204, ../sass/base/_mixins.scss */
   .main, .header__container, .footer__container {
     padding:  0 16px;
     padding: 0 1rem; } }
-/* line 194, ../sass/base/_mixins.scss */
+/* line 210, ../sass/base/_mixins.scss */
 .nav ul:before, .footer__container:before, .projects:before, .nav ul:after, .footer__container:after, .projects:after {
   content: "";
   display: table; }
-/* line 199, ../sass/base/_mixins.scss */
+/* line 215, ../sass/base/_mixins.scss */
 .nav ul:after, .footer__container:after, .projects:after {
   clear: both; }
 
@@ -706,8 +706,15 @@ body {
       -moz-transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       transform: scale(1, 1); }
+/* line 33, ../sass/modules/_nav.scss */
+.nav .nav__logo a {
+  font-size: 19px;
+  color: #222222; }
+  /* line 37, ../sass/modules/_nav.scss */
+  .nav .nav__logo a:hover {
+    color: #d90a1a; }
 
-/* line 34, ../sass/modules/_nav.scss */
+/* line 45, ../sass/modules/_nav.scss */
 .nav__highlight {
   display: block;
   height: 3px;
@@ -721,31 +728,31 @@ body {
   -ms-transform: scale(0, 1);
   transform: scale(0, 1); }
 
-/* line 44, ../sass/modules/_nav.scss */
+/* line 55, ../sass/modules/_nav.scss */
 .nav__mobile-menu {
   display: none; }
 
 @media only screen and (max-width: 1000px) {
-  /* line 49, ../sass/modules/_nav.scss */
+  /* line 60, ../sass/modules/_nav.scss */
   .nav {
     padding:  0 16px;
     padding: 0 1rem; } }
 @media only screen and (max-width: 500px) {
-  /* line 57, ../sass/modules/_nav.scss */
+  /* line 68, ../sass/modules/_nav.scss */
   .nav li {
     display: none;
     width: 100%;
     text-align: center; }
-  /* line 63, ../sass/modules/_nav.scss */
+  /* line 74, ../sass/modules/_nav.scss */
   .nav .nav__logo {
     text-align: center;
     display: block; }
 
-  /* line 69, ../sass/modules/_nav.scss */
+  /* line 80, ../sass/modules/_nav.scss */
   .nav--active li {
     display: block; }
 
-  /* line 73, ../sass/modules/_nav.scss */
+  /* line 84, ../sass/modules/_nav.scss */
   .nav__mobile-menu {
     display: block;
     position: absolute;
@@ -753,14 +760,14 @@ body {
     top: 1rem;
     font-size: 2rem;
     color: #222222; }
-    /* line 81, ../sass/modules/_nav.scss */
+    /* line 92, ../sass/modules/_nav.scss */
     .nav__mobile-menu:hover, .nav__mobile-menu.active {
       color: #d90a1a;
       background: transparent; }
-    /* line 87, ../sass/modules/_nav.scss */
+    /* line 98, ../sass/modules/_nav.scss */
     .nav__mobile-menu:visited {
       color: #222222; }
-      /* line 90, ../sass/modules/_nav.scss */
+      /* line 101, ../sass/modules/_nav.scss */
       .nav__mobile-menu:visited:hover {
         color: #d90a1a; } }
 /* line 1, ../sass/modules/_footer.scss */
@@ -769,13 +776,129 @@ body {
   color: #efefef;
   padding: 1em 0; }
 
-/* line 5, ../sass/modules/_projects.scss */
+/* line 1, ../sass/modules/_projects.scss */
+.projects {
+  display: -webkit-box;
+  /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+  display: -moz-box;
+  /* OLD: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* MID: IE 10 */
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden; }
+
+/* line 20, ../sass/modules/_projects.scss */
+.project__name {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  background: transparent;
+  color: #fff; }
+
+/* line 29, ../sass/modules/_projects.scss */
 .project {
-  width: 33%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.3%;
   min-height: 300px;
   float: left;
   text-align: center;
-  background: url("http://lorempixel.com/600/400/abstract/") center center repeat transparent; }
+  padding: 0;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  position: relative; }
+
+@media only screen and (max-width: 1000px) {
+  /* line 51, ../sass/modules/_projects.scss */
+  .project {
+    width: 33.2%; } }
+@media only screen and (max-width: 780px) {
+  /* line 57, ../sass/modules/_projects.scss */
+  .project {
+    width: 100%; } }
+/* line 62, ../sass/modules/_projects.scss */
+.project:hover .project__flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+/* line 71, ../sass/modules/_projects.scss */
+.project__front,
+.project__back {
+  width: 100%;
+  min-height: 300px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 86, ../sass/modules/_projects.scss */
+.project__front {
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table; }
+
+/* line 93, ../sass/modules/_projects.scss */
+.project__back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  padding: 1em;
+  background: #ffde17; }
+
+/* line 104, ../sass/modules/_projects.scss */
+.project__flipper {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 450ms;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 450ms;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 450ms;
+  -o-transform-style: preserve-3d;
+  -o-transition: 450ms;
+  transition: 450ms;
+  position: relative; }
+
+/* CSS updated */
+/* line 118, ../sass/modules/_projects.scss */
+.navWrapper {
+  margin: 0 0 1em;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
+  text-align: center; }
+
+/* line 126, ../sass/modules/_projects.scss */
+.navWrapper li {
+  display: inline-block;
+  margin-bottom: 0.5em; }
+
+/* line 131, ../sass/modules/_projects.scss */
+.navWrapper a {
+  display: block;
+  padding: 0.5em 1em;
+  background: #eee;
+  border-radius: 2px;
+  margin: 0 0.5em; }
+
+/* line 139, ../sass/modules/_projects.scss */
+.navWrapper .selected,
+#projects .navWrapper a:hover {
+  background: #d90a1a;
+  color: white; }
 
 /* line 1, ../sass/modules/_loading.scss */
 .spinner {
@@ -865,3 +988,6 @@ body {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); } }
+/* line 1, ../sass/modules/_blog.scss */
+.blog .header {
+  border-bottom: 3px solid #222222; }

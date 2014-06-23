@@ -27,8 +27,9 @@
 
 @mixin box-sizing($box-model) {
     -webkit-box-sizing: $box-model; 
-        -moz-box-sizing: $box-model; 
-            box-sizing: $box-model;
+    -moz-box-sizing: $box-model;
+    -o-box-sizing: $box-model;
+    box-sizing: $box-model;
 }
 
 @mixin border-radius($radius) {
@@ -36,6 +37,21 @@
     border-radius: $radius;
     background-clip: padding-box; 
 } 
+
+@mixin perspective($perspective) {
+    -webkit-perspective: $perspective;
+    -moz-perspective: $perspective;
+    -ms-perspective: $perspective;
+    perspective: $perspective;
+}
+
+@mixin backface-visibility($visibility) {
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    -ms-backface-visibility: $visibility;
+    -o-backface-visibility: $visibility;
+    backface-visibility: $visibility;
+}
 
 @mixin transition($range: all, $time: 1s, $ease: ease-in-out) {
     -webkit-transition: $range $time $ease;
