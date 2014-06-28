@@ -8,7 +8,7 @@
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 11, ../sass/base/_normalise.scss */
+/* line 22, ../sass/base/_normalise.scss */
 article,
 aside,
 details,
@@ -26,7 +26,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-/* line 30, ../sass/base/_normalise.scss */
+/* line 32, ../sass/base/_normalise.scss */
 audio,
 canvas,
 video {
@@ -45,7 +45,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-/* line 51, ../sass/base/_normalise.scss */
+/* line 52, ../sass/base/_normalise.scss */
 [hidden],
 template {
   display: none; }
@@ -94,7 +94,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 104, ../sass/base/_normalise.scss */
+/* line 105, ../sass/base/_normalise.scss */
 a:active,
 a:hover {
   outline: 0; }
@@ -121,7 +121,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 135, ../sass/base/_normalise.scss */
+/* line 136, ../sass/base/_normalise.scss */
 b,
 strong {
   font-weight: bold; }
@@ -153,7 +153,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 171, ../sass/base/_normalise.scss */
+/* line 174, ../sass/base/_normalise.scss */
 code,
 kbd,
 pre,
@@ -185,7 +185,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 207, ../sass/base/_normalise.scss */
+/* line 208, ../sass/base/_normalise.scss */
 sub,
 sup {
   font-size: 75%;
@@ -256,7 +256,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 285, ../sass/base/_normalise.scss */
+/* line 288, ../sass/base/_normalise.scss */
 button,
 input,
 select,
@@ -272,7 +272,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 299, ../sass/base/_normalise.scss */
+/* line 300, ../sass/base/_normalise.scss */
 button,
 input {
   line-height: normal; }
@@ -283,7 +283,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 311, ../sass/base/_normalise.scss */
+/* line 312, ../sass/base/_normalise.scss */
 button,
 select {
   text-transform: none; }
@@ -295,7 +295,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 324, ../sass/base/_normalise.scss */
+/* line 327, ../sass/base/_normalise.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -308,7 +308,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 336, ../sass/base/_normalise.scss */
+/* line 337, ../sass/base/_normalise.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -317,7 +317,7 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 346, ../sass/base/_normalise.scss */
+/* line 347, ../sass/base/_normalise.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -343,7 +343,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 370, ../sass/base/_normalise.scss */
+/* line 371, ../sass/base/_normalise.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -351,7 +351,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 379, ../sass/base/_normalise.scss */
+/* line 380, ../sass/base/_normalise.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -388,7 +388,7 @@ table {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 9, ../sass/base/_print.scss */
+  /* line 10, ../sass/base/_print.scss */
   a,
   a:visited {
     text-decoration: underline; }
@@ -404,13 +404,13 @@ table {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 26, ../sass/base/_print.scss */
+  /* line 28, ../sass/base/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
 
-  /* line 32, ../sass/base/_print.scss */
+  /* line 33, ../sass/base/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
@@ -421,7 +421,7 @@ table {
     display: table-header-group;
     /* h5bp.com/t */ }
 
-  /* line 42, ../sass/base/_print.scss */
+  /* line 43, ../sass/base/_print.scss */
   tr,
   img {
     page-break-inside: avoid; }
@@ -432,14 +432,15 @@ table {
 
   @page {
     margin: 0.5cm; }
-  /* line 55, ../sass/base/_print.scss */
+
+  /* line 57, ../sass/base/_print.scss */
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 62, ../sass/base/_print.scss */
+  /* line 63, ../sass/base/_print.scss */
   h2,
   h3 {
     page-break-after: avoid; } }
@@ -462,17 +463,17 @@ table {
 
 /* line 198, ../sass/base/_mixins.scss */
 .main,
-.about, .header__container, .footer__container {
+.about, .header__container, .footer__container, .blog__title {
   max-width: 980px;
   margin: auto; }
 
 @media only screen and (max-width: 980px) {
   /* line 204, ../sass/base/_mixins.scss */
   .main,
-  .about, .header__container, .footer__container {
+  .about, .header__container, .footer__container, .blog__title {
     padding:  0 16px;
     padding: 0 1rem; } }
-/* line 210, ../sass/base/_mixins.scss */
+/* line 211, ../sass/base/_mixins.scss */
 .nav ul:before, .footer__container:before, .projects:before, .nav ul:after, .footer__container:after, .projects:after {
   content: "";
   display: table; }
@@ -492,7 +493,7 @@ table {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 16, ../sass/base/_helpers.scss */
+/* line 17, ../sass/base/_helpers.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -517,7 +518,7 @@ table {
    ========================================================================== */
 /* Base
    ========================================================================== */
-/* line 8, ../sass/modules/_typography.scss */
+/* line 12, ../sass/modules/_typography.scss */
 html,
 button,
 input,
@@ -535,7 +536,7 @@ body {
 
 /* Headings
    ========================================================================== */
-/* line 25, ../sass/modules/_typography.scss */
+/* line 30, ../sass/modules/_typography.scss */
 h1,
 h2,
 h3,
@@ -546,7 +547,7 @@ h6 {
   color: #222222;
   font-weight: bold; }
 
-/* line 36, ../sass/modules/_typography.scss */
+/* line 37, ../sass/modules/_typography.scss */
 h1,
 .alpha {
   font-size: 60px;
@@ -557,31 +558,31 @@ h1,
   font-size: 160px;
   font-size:  10rem; }
 
-/* line 45, ../sass/modules/_typography.scss */
+/* line 46, ../sass/modules/_typography.scss */
 h2,
 .beta {
   font-size: 24px;
   font-size:  1.5rem; }
 
-/* line 50, ../sass/modules/_typography.scss */
+/* line 51, ../sass/modules/_typography.scss */
 h3,
 .gamma {
   font-size: 19px;
   font-size:  1.1875rem; }
 
-/* line 55, ../sass/modules/_typography.scss */
+/* line 56, ../sass/modules/_typography.scss */
 h4,
 .delta {
   font-size: 16px;
   font-size:  1rem; }
 
-/* line 60, ../sass/modules/_typography.scss */
+/* line 61, ../sass/modules/_typography.scss */
 h5,
 .epsilon {
   font-size: 13px;
   font-size:  0.8125rem; }
 
-/* line 65, ../sass/modules/_typography.scss */
+/* line 66, ../sass/modules/_typography.scss */
 h6,
 .zeta {
   font-size: 11px;
@@ -639,7 +640,7 @@ p {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 12, ../sass/modules/_layout.scss */
+/* line 13, ../sass/modules/_layout.scss */
 html,
 body {
   height: 100%; }
@@ -690,7 +691,7 @@ body {
 /* line 13, ../sass/modules/_nav.scss */
 .nav .nav__logo {
   text-align: left; }
-/* line 17, ../sass/modules/_nav.scss */
+/* line 18, ../sass/modules/_nav.scss */
 .nav a,
 .nav a:visited {
   color: #d90a1a;
@@ -762,7 +763,7 @@ body {
     top: 1rem;
     font-size: 2rem;
     color: #222222; }
-    /* line 92, ../sass/modules/_nav.scss */
+    /* line 93, ../sass/modules/_nav.scss */
     .nav__mobile-menu:hover, .nav__mobile-menu.active {
       color: #d90a1a;
       background: transparent; }
@@ -831,7 +832,7 @@ body {
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg); }
 
-/* line 71, ../sass/modules/_projects.scss */
+/* line 72, ../sass/modules/_projects.scss */
 .project__front,
 .project__back {
   width: 100%;
@@ -896,7 +897,7 @@ body {
   border-radius: 2px;
   margin: 0 0.5em; }
 
-/* line 139, ../sass/modules/_projects.scss */
+/* line 140, ../sass/modules/_projects.scss */
 .navWrapper .selected,
 #projects .navWrapper a:hover {
   background: #d90a1a;
@@ -974,6 +975,7 @@ body {
     -ms-transform: scale(1);
     transform: scale(1);
     z-index: -1; } }
+
 @-moz-keyframes bounce {
   /* line 58, ../sass/modules/_loading.scss */
   0% {
@@ -990,6 +992,7 @@ body {
     -ms-transform: scale(1);
     transform: scale(1);
     z-index: -1; } }
+
 @-ms-keyframes bounce {
   /* line 58, ../sass/modules/_loading.scss */
   0% {
@@ -1006,6 +1009,7 @@ body {
     -ms-transform: scale(1);
     transform: scale(1);
     z-index: -1; } }
+
 @keyframes bounce {
   /* line 58, ../sass/modules/_loading.scss */
   0% {
@@ -1022,9 +1026,23 @@ body {
     -ms-transform: scale(1);
     transform: scale(1);
     z-index: -1; } }
+
 /* line 1, ../sass/modules/_blog.scss */
 .blog .header {
   border-bottom: 3px solid #222222; }
+
+/* line 5, ../sass/modules/_blog.scss */
+.advert {
+  background: #eee;
+  text-align: center;
+  padding:  16px;
+  padding: 1rem; }
+
+/* line 11, ../sass/modules/_blog.scss */
+.categories {
+  background: #ffde17;
+  padding:  16px;
+  padding: 1rem; }
 
 /* line 1, ../sass/modules/_about.scss */
 .about {

@@ -1,3 +1,18 @@
 .blog .header {
     border-bottom: 3px solid $mineShaft;
 }
+
+.advert {
+    background: #eee;
+    text-align: center;
+    @include rem('padding', 1rem);
+}
+
+.categories {
+    background: $candlelight;
+    @include rem('padding', 1rem);
+}
+
+.blog__title {
+    @extend %grid;
+}
