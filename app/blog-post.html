@@ -6,12 +6,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>James Tease :: Web Developer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="prefetch" href="/img/backgrounds/bg.png">
+
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|Exo:700,900" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="/css/fold.css">
         <link rel="stylesheet" href="/css/main.css">
         <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -36,22 +39,26 @@
             <h1 class="mega">Hello World!</h1>
         </section> -->
         
-        <header class="blog__title javascript">
-            <h1>Blog post title</h1>
-        </header>
 
         <main class="main">
 
+            <header class="blog__title javascript clearfix">
+                <div class="grid">
+                    <h1>Blog post title</h1>
+                </div>
+            </header>
 
-            <section class="blog__meta">
-                <p>Posted on 12/3/2014 in <a href="#">Javascript</a>.</p>
-            </section>
+            <aside class="blog__meta">
+                <div class="grid">
+                    <p>Posted on 12/3/2014 in <a href="#">Javascript</a>.</p>
+                </div>
+            </aside>
 
-            <div class="advert">
+            <div class="advert grid">
                 <p>An advert</p>
             </div>
     
-            <article class="blog__article">
+            <article class="blog__article grid">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
                     dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
                     nam, hic distinctio esse officiis explicabo dolor ducimus.</p>
@@ -75,8 +82,8 @@
 
 
             <section class="about">
-                <p><a href="https://twitter.com/whostolemyhat" target="_blank" title="Me on Twitter">Follow me on Twitter</a>,
-                or you can get in touch with me <a href="mailto:hello@jamestease.co.uk" title="Email me">via email</a>.</p>
+                <p><a href="https://twitter.com/whostolemyhat" target="_blank" title="Me on Twitter" class="button"><i class="icon twitter"></i>Follow me on Twitter</a>
+                or you can get in touch with me <a href="mailto:hello@jamestease.co.uk" title="Email me" class="button"><i class="icon email"></i>via email</a>.</p>
             </section>
 
 
@@ -90,8 +97,10 @@
         </main>
 
         <aside class="categories">
-            <p>Posted on 12th Feburary 2014 under <a href="#">Javascript</a>.</p>
-            <p><a href="#">&laquo; View all posts</a></p>
+            <div class="grid">
+                <p>Posted on 12th Feburary 2014 under <a href="#">Javascript</a>.</p>
+                <a href="#">&laquo; View all posts</a>
+            </div>
         </aside>
 
         
@@ -100,6 +109,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sapiente, non, dolorem, dolor consequuntur ratione quam fugit facere dolorum amet quisquam accusantium repellendus corporis inventore modi odio animi nemo dicta?</p>
             </div>
         </footer>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
         <script src="/js/plugins.js"></script>

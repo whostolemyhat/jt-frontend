@@ -1,13 +1,16 @@
 @import "variables";
-@import "base/base";
+@import "base/mixins";
 
-// modules
-@import "modules/typography";
-@import "modules/layout";
-@import "modules/header";
-@import "modules/nav";
+
+// // modules
+// @import "modules/typography";
+// @import "modules/layout";
+// @import "modules/header";
+// @import "modules/nav";
+@import "base/print";
 @import "modules/footer";
 @import "modules/projects";
 @import "modules/loading";
 @import "modules/blog";
 @import "modules/about";
+@import "modules/buttons";

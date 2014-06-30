@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '<%= app %>/css/main.css': '<%= app %>/sass/main.scss',
-                    // '<%= app %>/css/ie.css': '<%= app %>/sass/ie.scss',
+                    '<%= app %>/css/fold.css': '<%= app %>/sass/fold.scss',
                     // '<%= app %>/css/print.css': '<%= app %>/sass/print.scss'
                 }
             },
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '<%= app %>/build/css/main.css': '<%= app %>/sass/main.scss',
-                    // '<%= app %>/build/css/ie.css': '<%= app %>/sass/ie.scss',
+                    '<%= app %>/build/css/fold.css': '<%= app %>/sass/fold.scss',
                     // '<%= app %>/build/css/print.css': '<%= app %>/sass/print.scss'
                 }
             }

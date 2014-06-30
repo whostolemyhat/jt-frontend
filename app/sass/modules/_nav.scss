@@ -46,7 +46,7 @@
     display: block;
     height: 3px;
     width: 100%;
-    background-color: $candlelight;
+    background-color: $mineShaft;
 
     @include transition(all, 0.12s, ease-in-out);
     @include transform(scale(0, 1));

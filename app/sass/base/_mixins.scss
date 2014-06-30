@@ -56,6 +56,8 @@
 @mixin transition($range: all, $time: 1s, $ease: ease-in-out) {
     -webkit-transition: $range $time $ease;
     -moz-transition:    $range $time $ease; 
+    -ms-transition:    $range $time $ease; 
+    -o-transition:    $range $time $ease; 
     transition:         $range $time $ease;
 }
 

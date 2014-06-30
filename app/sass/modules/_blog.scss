@@ -6,13 +6,30 @@
     background: #eee;
     text-align: center;
     @include rem('padding', 1rem);
+    @include rem('margin-bottom', 2rem);
+
+    p {
+        margin: 0;
+    }
 }
 
 .categories {
-    background: $candlelight;
+    background: $greenHaze;
+    border-top: 3px solid lighten($greenHaze, 3%);
     @include rem('padding', 1rem);
 }
 
 .blog__title {
-    @extend %grid;
+    background: $candlelight;
+    @include rem('padding', 1rem 0);
+}
+
+.blog__meta {
+    @include rem('padding', 1rem 0);
+    background: lighten($candlelight, 10%);
+    @include rem('margin-bottom', 2rem);
+
+    p {
+        margin: 0;
+    }
 }
