@@ -31,6 +31,7 @@
     }
     
     .nav__logo a {
+        @include inline-block();
         font-size: $headingGamma;
         color: $mineShaft;
         
@@ -102,5 +103,90 @@
                 color: $linkColour;
             }
         }
+    }
+}
+
+.nav__logo a:hover {
+    @include transform(rotate(-10deg) scale(1.2));
+
+    .spin {
+        @include animation('none');
+    }
+}
+
+.spin {
+    -webkit-transform-origin: center 55%;
+    -moz-transform-origin: center 55%;
+    -o-transform-origin: center 55%;
+    transform-origin: center 55%;
+
+    @include perspective(1200px);
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.spin-me-right-round {
+    display: inline-block;
+    @include animation('spin 8s 0 infinite ease');
+}
+
+.baby-right-round {
+    display: inline-block;
+    @include animation('twitch 8s 0 infinite linear');
+}
+
+@include keyframes(spin) {
+    from {
+        @include transform(rotateY(0deg));
+    }
+
+    to {
+        @include transform(rotateY(-360deg));
+    }
+}
+
+@include keyframes(twitch) {
+    0% {
+        @include transform(rotate(0deg));
+    }
+
+    20% {
+        @include transform(rotate(10deg));
+    }
+
+    25% {
+        @include transform(rotate(-20deg));
+    }
+
+    40%,
+    45% {
+        @include transform(rotate(180deg));
+    }
+
+    50% {
+        @include transform(rotate(90deg));
+    }
+
+    65% {
+        @include transform(rotate(-90deg));
+    }
+
+    70% {
+        @include transform(rotate(-60deg));
+    }
+
+    75% {
+        @include transform(rotate(-80deg));
+    }
+
+    85%,
+    90% {
+        @include transform(rotate(220deg));
+    }
+
+    93% {
+        @include transform(rotate(180deg));
     }
 }

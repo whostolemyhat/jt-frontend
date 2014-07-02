@@ -646,6 +646,10 @@ img {
 .header {
   padding: 1em 0; }
 
+/* line 10, ../sass/modules/_header.scss */
+.home .header {
+  border: none; }
+
 /* line 7, ../sass/modules/_nav.scss */
 .nav li {
   width: 25%;
@@ -674,13 +678,19 @@ img {
       transform: scale(1, 1); }
 /* line 33, ../sass/modules/_nav.scss */
 .nav .nav__logo a {
+  display: inline-block;
   font-size: 19px;
   color: #222222; }
-  /* line 37, ../sass/modules/_nav.scss */
+  /* line 133, ../sass/base/_mixins.scss */
+  .lt-ie8 .nav .nav__logo a {
+    display: inline;
+    zoom: 1;
+    margin-right: 0.25em; }
+  /* line 38, ../sass/modules/_nav.scss */
   .nav .nav__logo a:hover {
     color: #d90a1a; }
 
-/* line 45, ../sass/modules/_nav.scss */
+/* line 46, ../sass/modules/_nav.scss */
 .nav__highlight {
   display: block;
   height: 3px;
@@ -696,31 +706,31 @@ img {
   -ms-transform: scale(0, 1);
   transform: scale(0, 1); }
 
-/* line 55, ../sass/modules/_nav.scss */
+/* line 56, ../sass/modules/_nav.scss */
 .nav__mobile-menu {
   display: none; }
 
 @media only screen and (max-width: 1000px) {
-  /* line 60, ../sass/modules/_nav.scss */
+  /* line 61, ../sass/modules/_nav.scss */
   .nav {
     padding:  0 16px;
     padding: 0 1rem; } }
 @media only screen and (max-width: 500px) {
-  /* line 68, ../sass/modules/_nav.scss */
+  /* line 69, ../sass/modules/_nav.scss */
   .nav li {
     display: none;
     width: 100%;
     text-align: center; }
-  /* line 74, ../sass/modules/_nav.scss */
+  /* line 75, ../sass/modules/_nav.scss */
   .nav .nav__logo {
     text-align: center;
     display: block; }
 
-  /* line 80, ../sass/modules/_nav.scss */
+  /* line 81, ../sass/modules/_nav.scss */
   .nav--active li {
     display: block; }
 
-  /* line 84, ../sass/modules/_nav.scss */
+  /* line 85, ../sass/modules/_nav.scss */
   .nav__mobile-menu {
     display: block;
     position: absolute;
@@ -728,13 +738,400 @@ img {
     top: 1rem;
     font-size: 2rem;
     color: #222222; }
-    /* line 92, ../sass/modules/_nav.scss */
+    /* line 93, ../sass/modules/_nav.scss */
     .nav__mobile-menu:hover, .nav__mobile-menu.active {
       color: #d90a1a;
       background: transparent; }
-    /* line 98, ../sass/modules/_nav.scss */
+    /* line 99, ../sass/modules/_nav.scss */
     .nav__mobile-menu:visited {
       color: #222222; }
-      /* line 101, ../sass/modules/_nav.scss */
+      /* line 102, ../sass/modules/_nav.scss */
       .nav__mobile-menu:visited:hover {
         color: #d90a1a; } }
+/* line 109, ../sass/modules/_nav.scss */
+.nav__logo a:hover {
+  -webkit-transform: rotate(-10deg) scale(1.2);
+  -moz-transform: rotate(-10deg) scale(1.2);
+  -ms-transform: rotate(-10deg) scale(1.2);
+  transform: rotate(-10deg) scale(1.2); }
+  /* line 112, ../sass/modules/_nav.scss */
+  .nav__logo a:hover .spin {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none; }
+
+/* line 117, ../sass/modules/_nav.scss */
+.spin {
+  -webkit-transform-origin: center 55%;
+  -moz-transform-origin: center 55%;
+  -o-transform-origin: center 55%;
+  transform-origin: center 55%;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  perspective: 1200px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+/* line 130, ../sass/modules/_nav.scss */
+.spin-me-right-round {
+  display: inline-block;
+  -webkit-animation: spin 8s 0 infinite ease;
+  -moz-animation: spin 8s 0 infinite ease;
+  -ms-animation: spin 8s 0 infinite ease;
+  animation: spin 8s 0 infinite ease; }
+
+/* line 135, ../sass/modules/_nav.scss */
+.baby-right-round {
+  display: inline-block;
+  -webkit-animation: twitch 8s 0 infinite linear;
+  -moz-animation: twitch 8s 0 infinite linear;
+  -ms-animation: twitch 8s 0 infinite linear;
+  animation: twitch 8s 0 infinite linear; }
+
+@-webkit-keyframes spin {
+  /* line 141, ../sass/modules/_nav.scss */
+  from {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+
+  /* line 145, ../sass/modules/_nav.scss */
+  to {
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg); } }
+@-moz-keyframes spin {
+  /* line 141, ../sass/modules/_nav.scss */
+  from {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+
+  /* line 145, ../sass/modules/_nav.scss */
+  to {
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg); } }
+@-ms-keyframes spin {
+  /* line 141, ../sass/modules/_nav.scss */
+  from {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+
+  /* line 145, ../sass/modules/_nav.scss */
+  to {
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg); } }
+@keyframes spin {
+  /* line 141, ../sass/modules/_nav.scss */
+  from {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+
+  /* line 145, ../sass/modules/_nav.scss */
+  to {
+    -webkit-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg); } }
+@-webkit-keyframes twitch {
+  /* line 151, ../sass/modules/_nav.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  /* line 155, ../sass/modules/_nav.scss */
+  20% {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg); }
+
+  /* line 159, ../sass/modules/_nav.scss */
+  25% {
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg); }
+
+  /* line 163, ../sass/modules/_nav.scss */
+  40%,
+  45% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+  /* line 168, ../sass/modules/_nav.scss */
+  50% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+  /* line 172, ../sass/modules/_nav.scss */
+  65% {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+  /* line 176, ../sass/modules/_nav.scss */
+  70% {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+
+  /* line 180, ../sass/modules/_nav.scss */
+  75% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    transform: rotate(-80deg); }
+
+  /* line 184, ../sass/modules/_nav.scss */
+  85%,
+  90% {
+    -webkit-transform: rotate(220deg);
+    -moz-transform: rotate(220deg);
+    -ms-transform: rotate(220deg);
+    transform: rotate(220deg); }
+
+  /* line 189, ../sass/modules/_nav.scss */
+  93% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); } }
+@-moz-keyframes twitch {
+  /* line 151, ../sass/modules/_nav.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  /* line 155, ../sass/modules/_nav.scss */
+  20% {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg); }
+
+  /* line 159, ../sass/modules/_nav.scss */
+  25% {
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg); }
+
+  /* line 163, ../sass/modules/_nav.scss */
+  40%,
+  45% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+  /* line 168, ../sass/modules/_nav.scss */
+  50% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+  /* line 172, ../sass/modules/_nav.scss */
+  65% {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+  /* line 176, ../sass/modules/_nav.scss */
+  70% {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+
+  /* line 180, ../sass/modules/_nav.scss */
+  75% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    transform: rotate(-80deg); }
+
+  /* line 184, ../sass/modules/_nav.scss */
+  85%,
+  90% {
+    -webkit-transform: rotate(220deg);
+    -moz-transform: rotate(220deg);
+    -ms-transform: rotate(220deg);
+    transform: rotate(220deg); }
+
+  /* line 189, ../sass/modules/_nav.scss */
+  93% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); } }
+@-ms-keyframes twitch {
+  /* line 151, ../sass/modules/_nav.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  /* line 155, ../sass/modules/_nav.scss */
+  20% {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg); }
+
+  /* line 159, ../sass/modules/_nav.scss */
+  25% {
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg); }
+
+  /* line 163, ../sass/modules/_nav.scss */
+  40%,
+  45% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+  /* line 168, ../sass/modules/_nav.scss */
+  50% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+  /* line 172, ../sass/modules/_nav.scss */
+  65% {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+  /* line 176, ../sass/modules/_nav.scss */
+  70% {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+
+  /* line 180, ../sass/modules/_nav.scss */
+  75% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    transform: rotate(-80deg); }
+
+  /* line 184, ../sass/modules/_nav.scss */
+  85%,
+  90% {
+    -webkit-transform: rotate(220deg);
+    -moz-transform: rotate(220deg);
+    -ms-transform: rotate(220deg);
+    transform: rotate(220deg); }
+
+  /* line 189, ../sass/modules/_nav.scss */
+  93% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); } }
+@keyframes twitch {
+  /* line 151, ../sass/modules/_nav.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  /* line 155, ../sass/modules/_nav.scss */
+  20% {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg); }
+
+  /* line 159, ../sass/modules/_nav.scss */
+  25% {
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg); }
+
+  /* line 163, ../sass/modules/_nav.scss */
+  40%,
+  45% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+  /* line 168, ../sass/modules/_nav.scss */
+  50% {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+  /* line 172, ../sass/modules/_nav.scss */
+  65% {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+  /* line 176, ../sass/modules/_nav.scss */
+  70% {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+
+  /* line 180, ../sass/modules/_nav.scss */
+  75% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    transform: rotate(-80deg); }
+
+  /* line 184, ../sass/modules/_nav.scss */
+  85%,
+  90% {
+    -webkit-transform: rotate(220deg);
+    -moz-transform: rotate(220deg);
+    -ms-transform: rotate(220deg);
+    transform: rotate(220deg); }
+
+  /* line 189, ../sass/modules/_nav.scss */
+  93% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); } }

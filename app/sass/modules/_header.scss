@@ -1,7 +1,12 @@
 .header {
     padding: 1em 0;
+    // border-bottom: 3px solid $mineShaft;
 }
 
 .header__container {
     @extend %grid;
+}
+
+.home .header {
+    border: none;
 }

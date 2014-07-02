@@ -13,7 +13,6 @@
 }
 
 .project {
-    // width: 33%;
 
     .button,
     .button:visited {
@@ -27,7 +26,6 @@
     vertical-align: middle;
     display: table-cell;
     background: transparent;
-    // background: rgba(255, 222, 23, 0.3); // candlelight
     color: #fff;
 }
 
@@ -85,15 +83,9 @@
 
 .project__flipper {
   -webkit-transform-style: preserve-3d;
-  // -webkit-transition: 450ms;
   -moz-transform-style: preserve-3d;
-  // -moz-transition: 450ms;
   -ms-transform-style: preserve-3d;
-  // -ms-transition: 450ms;
   -o-transform-style: preserve-3d;
-  // -o-transition: 450ms;
-  // transition: 450ms;
-
   @include transition(all, 450ms);
   position: relative;
 }
@@ -124,4 +116,18 @@
 #projects .navWrapper a:hover {
   background: $monza;
   color: white;
+}
+
+.projects__title {
+  background: $cobalt;
+  @include rem('padding', 1rem 0);
+
+  h1 {
+    color: white;
+  }
+}
+
+.projects__meta {
+  color: white;
+  background: lighten($cobalt, 10%);
 }
