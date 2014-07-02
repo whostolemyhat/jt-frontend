@@ -486,8 +486,8 @@ textarea {
 
 /* line 44, ../sass/modules/_typography.scss */
 body {
-  line-height: 25px;
-  line-height:  1.5625rem; }
+  line-height: 28px;
+  line-height:  1.75rem; }
 
 /* Headings
    ========================================================================== */
@@ -613,8 +613,10 @@ body {
   background-size: cover;
   text-align: center;
   display: table;
-  width: 100%; }
-  /* line 34, ../sass/modules/_layout.scss */
+  width: 100%;
+  margin-bottom:  32px;
+  margin-bottom: 2rem; }
+  /* line 35, ../sass/modules/_layout.scss */
   .intro .mega {
     color: white;
     display: table-cell;
@@ -622,21 +624,21 @@ body {
     line-height: 1; }
 
 @media only screen and (max-width: 550px) {
-  /* line 44, ../sass/modules/_layout.scss */
+  /* line 45, ../sass/modules/_layout.scss */
   .mega {
     font-size:  128px;
     font-size: 8rem; } }
 @media only screen and (max-width: 425px) {
-  /* line 50, ../sass/modules/_layout.scss */
+  /* line 51, ../sass/modules/_layout.scss */
   .mega {
     font-size:  96px;
     font-size: 6rem; } }
 @media only screen and (max-width: 330px) {
-  /* line 56, ../sass/modules/_layout.scss */
+  /* line 57, ../sass/modules/_layout.scss */
   .mega {
     font-size:  64px;
     font-size: 4rem; } }
-/* line 61, ../sass/modules/_layout.scss */
+/* line 62, ../sass/modules/_layout.scss */
 img {
   width: auto;
   max-width: 100%;
