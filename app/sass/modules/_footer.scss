@@ -1,11 +1,63 @@
 .footer {
+    @include clearfix();
     // background: url('/img/tile.png') 0 0 repeat $mineShaft;
     background: url('/img/backgrounds/zwartevilt.png') 0 0 repeat $mineShaft;
     color: $gallery;
-    padding: 1em 0;
+    @include rem('padding', 1rem 0 2rem);
+
+    .twitter {
+        background-image: url('../img/icons/hover/twitter.png');
+    }
+
+    .github {
+        background-image: url('../img/icons/hover/github.png');
+    }
+
+    .linkedin {
+        background-image: url('../img/icons/hover/linkedin.png');
+    }
+    
+    a:hover {
+        background: transparent;
+        @include transition(all, 0);
+
+        .twitter {
+            background-image: url('../img/icons/twitter.png');
+        }
+
+        .github {
+            background-image: url('../img/icons/github.png');
+        }
+
+        .linkedin {
+            background-image: url('../img/icons/linkedin.png');
+        }
+    }
 }
 
 .footer__container {
     @extend %grid;
     @extend %clearfix;
+}
+
+h2 {
+    color: $gallery;
+}
+
+.footer__links {
+    float: left;
+    width: 32%;
+    margin-right: 1%;
+    ul {
+        @extend %no-style-list;    
+    }
+    
+}
+
+.wordy {
+    width: 45%;
+}
+
+.social {
+    width: 20%;
 }

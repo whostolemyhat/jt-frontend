@@ -17,12 +17,32 @@
 
 .blog__title {
     background: $candlelight;
+    position: relative;
+    z-index: -2;
     @include rem('padding', 1rem 0);
+
+    h1 {
+        z-index: 10;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url('../img/backgrounds/blog-bg.jpg') repeat top left transparent;
+        opacity: 0.1;
+    }
 }
 
 .blog__meta {
     @include rem('padding', 1rem 0);
-    background: lighten($candlelight, 10%);
+    // background: lighten($candlelight, 10%);
+    background: $candlelight;
     @include rem('margin-bottom', 2rem);
 
     p {

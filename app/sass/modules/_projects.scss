@@ -119,7 +119,7 @@
 }
 
 .projects__title {
-  background: $cobalt;
+  background: url('../img/backgrounds/project-bg3.jpg') repeat top left $cobalt;
   @include rem('padding', 1rem 0);
 
   h1 {
