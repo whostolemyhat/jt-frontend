@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 options: {
-                    // outputStyle: 'expanded',
+                    style: 'expanded',
                     lineNumbers: true
                 },
                 files: {
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
             },
             prod: {
                 options: {
-                    // outputStyle: 'compressed',
+                    style: 'compressed',
                     lineNumbers: false
                 },
                 files: {
@@ -82,6 +82,18 @@ module.exports = function(grunt) {
             dist: {
                 src: ['<%= app %>/js/*.js'], // not vendor files
                 dest: '<%= app %>/build/js/app.min.js'
+            },
+            projects: {
+                src: [
+                    '<%= app %>/js/projects/lib/underscore-min.js',
+                    '<%= app %>/js/projects/lib/backbone-min.js',
+                    '<%= app %>/js/projects/models/project.js',
+                    '<%= app %>/js/projects/collections/projectLibrary.js',
+                    '<%= app %>/js/projects/views/project.js',
+                    '<%= app %>/js/projects/views/projectLibrary.js',
+                    '<%= app %>/js/projects/app.js'
+                ],
+                dest: '<%= app %>/build/js/projects/projects.min.js'
             }
         },
 

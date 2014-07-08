@@ -12,8 +12,12 @@
     overflow: hidden;
 }
 
-.project {
+.project__container {
+  @include clearfix();
+  width: 100%;
+}
 
+.project {
     .button,
     .button:visited {
       @include box-shadow(inset 0 0 0 4px darken($greenHaze, 3%));
@@ -27,6 +31,10 @@
     display: table-cell;
     background: transparent;
     color: #fff;
+
+    .project--dark & {
+      color: $mineShaft;
+    }
 }
 
 .project {
@@ -46,6 +54,12 @@
     }
 }
 
+@media only screen and (max-width: 960px) {
+  .project {
+    width: 50%;
+  }
+}
+
 @media only screen and (max-width: 780px) {
     .project {
         width: 100%;
@@ -61,6 +75,8 @@
     width: 100%;
     min-height: 300px;
     @include backface-visibility(hidden);
+    background-image: url('../img/backgrounds/project-placeholder.jpg');
+    background-color: $cobalt;
 
     position: absolute;
     top: 0;
@@ -71,6 +87,7 @@
   z-index: 2;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   display: table;
 }
 
@@ -119,15 +136,16 @@
 }
 
 .projects__title {
-  background: url('../img/backgrounds/project-bg3.jpg') repeat top left $cobalt;
+  background: url('../img/backgrounds/project-banner.jpg') repeat top left $cobalt;
   @include rem('padding', 1rem 0);
+  @include rem('margin', 1em 0);
 
   h1 {
     color: white;
   }
 }
 
-.projects__meta {
-  color: white;
-  background: lighten($cobalt, 10%);
-}
+// .projects__meta {
+//   color: white;
+//   background: lighten($cobalt, 10%);
+// }

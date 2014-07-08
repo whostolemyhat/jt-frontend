@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/bb-projects.css">
+{% endblock %}
+
+{% block content %}
+    <h1>Projects</h1>
+    
+    <main id="main" class="grid">
+        <p>Here's my portfolio of a variety of side projects I've knocked together in my spare time.
+            They range from Android apps to HTML5 games - you can filter the list by using the links below.</p>
+        <div id="projects">
+            <div class="container"></div>
+            
+            <noscript>
+                <div>
+                    <h3><a href="/games/tessellate/" title="Tessellate">Tessellate</a></h3>
+                    <a href="/games/tessellate/" class="projectimg" title="Tessellate game">
+                        <img src="/static/images/projects/tessellate.png" alt="Tessellate game" />
+                    </a>
+                    <p>Tessellate - a tetris clone written in Javascript. My April entry for <a href="http://www.onegameamonth.com/" target="_blank">One Game a Month</a>.</p>
+                </div>
+
+                <div>
+                    <h3><a href="/games/copycat/" title="Copycat">Copycat</a></h3>
+                    <a href="/games/copycat/" class="projectimg" title="Copycat game">
+                        <img src="/static/images/projects/copycat.jpg" alt="Copycat game" />
+                    </a>
+                    <p>A memory game - repeat the sequence! February entry for <a href="http://www.onegameamonth.com/" target="_blank">One Game a Month</a>.</p>
+                    <p><a href="/blether/1gam-february-copycat-game" title="Writeup of Copycat project">Writeup of the Copycat project</a> on my blog.</p>
+                </div>
+
+                <div>
+                    <h3><a href="/games/pewpew/" title="Pew Pew">Pew Pew</a></h3>
+                    <a href="/games/pewpew/" class="projectimg" title="Pewpew game">
+                        <img src="/static/images/projects/pewpew.png" alt="Pewpew game" />
+                    </a>
+                    <p>An HTML5 shoot-em-up game - my January entry for <a href="http://www.onegameamonth.com/" target="_blank">One Game a Month</a>.</p>
+                    <p><a href="/blether/one-game-a-month-january-pew-pew" title="Writeup of PewPew project">Writeup of the PewPew project</a> on my blog.</p>
+                </div>
+                
+                <div>
+                    <h3><a href="noughts-and-crosses/" title="Noughts and crosses">Noughts and Crosses</a></h3>
+                    <p><a href="noughts-and-crosses/" class="projectimg" title="Noughts and crosses">
+                        <img src="/static/images/projects/noughts-and-crosses-small.jpg" alt="Noughts and crosses" />
+                    </a>A version of noughts of crosses with simple AI, using Javascript.</p>
+                </div>
+                
+                <div>
+                    <h3><a href="snake/" title="Snake">Snake</a></h3>
+                    <p><a href="snake/" class="projectimg" title="Snake">
+                        <img src="/static/images/projects/snake-small.jpg" alt="Snake game" />
+                    </a>A clone of the game found on old Nokia phones using Javascript and HTML canvas.</p>
+                </div>
+                
+                <div>
+                    <h3><a href="pong/" title="Pong">Pong</a></h3>
+                    
+                    <p><a href="pong/" class="projectimg" title="Pong">
+                        <img src="/static/images/projects/pong-small.jpg" alt="Pong game"/>
+                    </a>
+                    <p><a href="pong/" title="Pong">Single player</a> or <a href="pong-two-player/" title="Two-player Pong">two players</a>.</p>
+
+                    A clone of Pong using HTML canvas and Javascript - won't work in Internet Explorer, but all modern browsers should be fine.</p>
+                </div>
+
+
+                <div>
+                    <h3><a href="/projects/team-generator" title="Random Team Generator">Random Team Generator</a></h3>
+                    <p>A simple web app which generates random teams from user-submitted names. Built using the Flask framework.</p>
+                </div>
+
+                 <div>
+                    <h3><a href="https://github.com/whostolemyhat/bookmarks" title="Bookmarks">Bookmark application</a></h3>
+                    <p>A (work-in-progress) bookmark site which I wrote to learn about Flask (a very small Python web framework).</p>
+                </div>
+
+                <div>
+                    <h3><a href="/projects/sort-your-life-out/" title="Sort Your Life Out!">Sort Your Life Out!</a></h3>
+                    <p><a href="/projects/sort-your-life-out/" title="Sort Your Life Out!" class="projectimg">
+                            <img src="/static/images/projects/sort-your-life-out/icon.png" alt="Sort Your Life Out!" />
+                        </a>
+                        An Android to-do list app, designed for simplicity because I was fed up of downloading huge apps which
+                        had features I never used. Download from 
+                        <a href="https://play.google.com/store/apps/details?id=uk.jamestease.todo">Google Play</a>.</p>
+                </div>
+
+                <div>
+                    <h3><a href="/projects/clear-input/" title="Clear Input">clear-input.js</a></h3>
+                    <p>A script which clears the default value of a form input on focus, 
+                        and restores it on blur if the field is empty. This uses the HTML5 placeholder attribute if the browser
+                        supports it, otherwise uses the default value of the field.</p>
+                </div>
+
+                <div>
+                    <h3><a href="http://jt-udacity.appspot.com/" title="Wiki app" target="_blank">Wiki app</a></h3>
+                    <p>The final of 
+                        <a href="http://www.udacity.com/overview/Course/cs253/CourseRev/apr2012" 
+                        title="Udacity Web Application Engineering course" target="_blank">
+                            Udacity CS253 (Web Application Engineering)</a> was to build a wiki-like
+                        app using Google App Engine - this is the app I built. Pages can be created and edited
+                        only by logged-in users - you can 
+                        <a href="http://jt-udacity.appspot.com/signup" title="Sign up for an account" target="_blank">sign up here</a>.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3><a href="http://www.diminishedseventh.co.uk/labs/todo/" target="_blank" title="To-do list">To-do list (demo)</a></h3>
+                    <p>
+                    <a href="http://www.diminishedseventh.co.uk/labs/todo/" class="projectimg" target="_blank" title="To-do list">
+                        <img src="/static/images/projects/to-do.jpg" alt="To-do list" />
+                    </a>
+                    A to-do list, made to teach myself jQuery and Ajax techniques (ajax loading, drag-and-dropping and inline editing).</p>
+                </div>
+                
+                <div>
+                    <h3><a href="balls/" title="Balls demo">Balls demo</a></h3>
+                    <p><a href="balls/" class="projectimg" title="Balls demo">
+                        <img src="/static/images/projects/balls.jpg" alt="Balls" />
+                    </a>Javascript balls drawn on HTML5 canvas, which bounce around the screen. That's it really.</p>
+                </div>
+            </noscript>
+        </div>
+    </main>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script id="projectTemplate" type="text/template">
+    <div class="flipper <% _.each(tags, function(tag) { %> <%= tag %><% }); %>">
+        <div class="front" style="background-image:url('<%= img %>');">
+            <h2 class="projectName"><%= name %></h2>
+        </div>
+        <div class="back">
+            <%= desc %>
+            <a href="<%= url %>" target="_blank" title="<%= name %>">Take a look &raquo;</a>
+            <!--<ul>
+                <% _.each(tags, function(tag) { %><li><%= tag %></li><% }); %>
+            </ul>->
+        </div>
+    </div>
+</script>
+
+<script src="/static/js/projects/lib/underscore-min.js"></script>
+<script src="/static/js/projects/lib/backbone-min.js"></script>
+
+<script src="/static/js/projects/models/project.js"></script>
+<script src="/static/js/projects/collections/projectLibrary.js"></script>
+<script src="/static/js/projects/views/project.js"></script>
+<script src="/static/js/projects/views/projectLibrary.js"></script>
+
+<script src="/static/js/projects/app.js"></script>
+{% endblock %}
