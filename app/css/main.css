@@ -13,7 +13,7 @@
 /* Rem Fallbacks
    ========================================================================== */
 /* line 194, ../sass/base/_mixins.scss */
-.footer__links ul {
+.footer__links ul, .navWrapper {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -340,10 +340,9 @@ h2 {
 /* line 111, ../sass/modules/_projects.scss */
 .navWrapper {
   margin: 0 0 1em;
-  padding: 0;
-  list-style-type: none;
   overflow: auto;
   text-align: center;
+  width: 100%;
 }
 
 /* line 119, ../sass/modules/_projects.scss */
@@ -351,13 +350,22 @@ h2 {
   display: inline-block;
   margin-bottom: 0.5em;
 }
+/* line 133, ../sass/base/_mixins.scss */
+.lt-ie8 .navWrapper li {
+  display: inline;
+  zoom: 1;
+  margin-right: 0.25em;
+}
 
 /* line 124, ../sass/modules/_projects.scss */
 .navWrapper a {
   display: block;
-  padding: 0.5em 1em;
-  background: #eee;
-  border-radius: 2px;
+  padding:  8px 16px;
+  padding: 0.5rem 1rem;
+  background: #efefef;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-clip: padding-box;
   margin: 0 0.5em;
 }
 
@@ -373,8 +381,8 @@ h2 {
   background: url("../img/backgrounds/project-banner.jpg") repeat top left #004ba6;
   padding:  16px 0;
   padding: 1rem 0;
-  margin:  16px 0;
-  margin: 1em 0;
+  margin-bottom:  16px;
+  margin-bottom: 1em;
 }
 /* line 143, ../sass/modules/_projects.scss */
 .projects__title h1 {

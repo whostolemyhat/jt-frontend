@@ -109,23 +109,23 @@
 
 /* CSS updated */
 .navWrapper {
+  @extend %no-style-list;
   margin: 0 0 1em;
-  padding: 0;
-  list-style-type: none;
   overflow: auto;
   text-align: center;
+  width: 100%;
 }
 
 .navWrapper li {
-  display: inline-block;
+  @include inline-block();
   margin-bottom: 0.5em;
 }
 
 .navWrapper a {
   display: block;
-  padding: 0.5em 1em;
-  background: #eee;
-  border-radius: 2px;
+  @include rem(padding, 0.5rem 1rem);
+  background: $gallery;
+  @include border-radius(3px);
   margin: 0 0.5em;
 }
 
@@ -138,14 +138,9 @@
 .projects__title {
   background: url('../img/backgrounds/project-banner.jpg') repeat top left $cobalt;
   @include rem('padding', 1rem 0);
-  @include rem('margin', 1em 0);
+  @include rem('margin-bottom', 1em);
 
   h1 {
     color: white;
   }
 }
-
-// .projects__meta {
-//   color: white;
-//   background: lighten($cobalt, 10%);
-// }
