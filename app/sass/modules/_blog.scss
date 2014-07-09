@@ -1,3 +1,45 @@
+.blog__posts {
+    @extend %no-style-list;
+    width: 66%;
+
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
+.post__category {
+    color: lighten($mineShaft, 60%);
+
+    a:hover & {
+        color: lighten($mineShaft, 70%);
+    }
+}
+
+.blog__post__categories {
+    width: 30%;
+    float: right;
+    background: $greenHaze;
+    @include rem(padding, 1rem);
+
+    h3 {
+        @include rem(margin, 0 0 0.5rem);
+    }
+}
+
+.categories__list {
+    @extend %no-style-list;
+
+    a {
+        color: $gallery;
+
+        &:hover {
+            color: $mineShaft;
+            background: transparent;
+        }
+    }
+}
+
+
 .advert {
     background: #eee;
     text-align: center;
@@ -37,6 +79,10 @@
         background: url('../img/backgrounds/blog-bg.jpg') repeat top left transparent;
         opacity: 0.1;
     }
+}
+
+.blog .blog__title {
+    @include rem(margin-bottom, 2rem);
 }
 
 .blog__meta {

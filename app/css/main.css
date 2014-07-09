@@ -13,7 +13,7 @@
 /* Rem Fallbacks
    ========================================================================== */
 /* line 194, ../sass/base/_mixins.scss */
-.footer__links ul, .navWrapper {
+.footer__links ul, .navWrapper, .blog__posts, .categories__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -527,6 +527,48 @@ h2 {
   }
 }
 /* line 1, ../sass/modules/_blog.scss */
+.blog__posts {
+  width: 66%;
+}
+/* line 5, ../sass/modules/_blog.scss */
+.blog__posts h2 {
+  margin-bottom: 0;
+}
+
+/* line 10, ../sass/modules/_blog.scss */
+.post__category {
+  color: #bbbbbb;
+}
+/* line 13, ../sass/modules/_blog.scss */
+a:hover .post__category {
+  color: #d4d4d4;
+}
+
+/* line 18, ../sass/modules/_blog.scss */
+.blog__post__categories {
+  width: 30%;
+  float: right;
+  background: #04b53f;
+  padding:  16px;
+  padding: 1rem;
+}
+/* line 24, ../sass/modules/_blog.scss */
+.blog__post__categories h3 {
+  margin:  0 0 8px;
+  margin: 0 0 0.5rem;
+}
+
+/* line 32, ../sass/modules/_blog.scss */
+.categories__list a {
+  color: #efefef;
+}
+/* line 35, ../sass/modules/_blog.scss */
+.categories__list a:hover {
+  color: #222222;
+  background: transparent;
+}
+
+/* line 43, ../sass/modules/_blog.scss */
 .advert {
   background: #eee;
   text-align: center;
@@ -535,12 +577,12 @@ h2 {
   margin-bottom:  32px;
   margin-bottom: 2rem;
 }
-/* line 7, ../sass/modules/_blog.scss */
+/* line 49, ../sass/modules/_blog.scss */
 .advert p {
   margin: 0;
 }
 
-/* line 12, ../sass/modules/_blog.scss */
+/* line 54, ../sass/modules/_blog.scss */
 .categories {
   background: #04b53f;
   border-top: 3px solid #04c444;
@@ -548,7 +590,7 @@ h2 {
   padding: 1rem;
 }
 
-/* line 18, ../sass/modules/_blog.scss */
+/* line 60, ../sass/modules/_blog.scss */
 .blog__title {
   background: #ffde17;
   position: relative;
@@ -556,11 +598,11 @@ h2 {
   padding:  16px 0;
   padding: 1rem 0;
 }
-/* line 24, ../sass/modules/_blog.scss */
+/* line 66, ../sass/modules/_blog.scss */
 .blog__title h1 {
   z-index: 10;
 }
-/* line 28, ../sass/modules/_blog.scss */
+/* line 70, ../sass/modules/_blog.scss */
 .blog__title:after {
   content: "";
   display: block;
@@ -574,7 +616,13 @@ h2 {
   opacity: 0.1;
 }
 
-/* line 42, ../sass/modules/_blog.scss */
+/* line 84, ../sass/modules/_blog.scss */
+.blog .blog__title {
+  margin-bottom:  32px;
+  margin-bottom: 2rem;
+}
+
+/* line 88, ../sass/modules/_blog.scss */
 .blog__meta {
   padding:  16px 0;
   padding: 1rem 0;
@@ -582,7 +630,7 @@ h2 {
   margin-bottom:  32px;
   margin-bottom: 2rem;
 }
-/* line 48, ../sass/modules/_blog.scss */
+/* line 94, ../sass/modules/_blog.scss */
 .blog__meta p {
   margin: 0;
 }

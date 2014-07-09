@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="/css/main.css">
         <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body class="blog__post">
+    <body class="blog">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -42,66 +42,81 @@
 
         <main class="main">
 
-            <header class="blog__title blog--javascript clearfix">
+            <header class="blog__title clearfix">
                 <div class="grid">
-                    <h1>Blog post title</h1>
+                    <h1>Blether</h1>
                 </div>
             </header>
-
-            <aside class="blog__meta">
-                <div class="grid">
-                    <p>Posted on 12/3/2014 in <a href="#">Javascript</a>.</p>
-                </div>
-            </aside>
-
-            <div class="advert grid">
-                <p>An advert</p>
-            </div>
+    
     
             <article class="blog__article grid">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
                     dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
                     nam, hic distinctio esse officiis explicabo dolor ducimus.</p>
 
-                <a href="#"><img src="http://lorempixel.com/400/600" alt=""></a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
-                    dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
-                    nam, hic distinctio esse officiis explicabo dolor ducimus.</p>            
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
-                    dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
-                    nam, hic distinctio esse officiis explicabo dolor ducimus.</p>            
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
-                    dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
-                    nam, hic distinctio esse officiis explicabo dolor ducimus.</p>            
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
-                    dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
-                    nam, hic distinctio esse officiis explicabo dolor ducimus.</p>
+                <aside class="blog__post__categories">
+                    <h3>Filter by category</h3>
 
-                <code>Some code</code>
+                    <ul class="categories__list">
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Javascript</a></li>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Drupal</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Web</a></li>
+                    </ul>
+                </aside>
+
+                <ul class="blog__posts">
+                    <li>
+                        <h2><a href="#">Blog post <span class="post__category">Javascript</span></a></h2>
+                        <span class="blog__post--date">19 June 2014</span>
+                    </li>
+                    <li>
+                    <h2><a href="#">Another Blog post <span class="post__category">Web</span></a></h2>
+                        <span class="blog__post--date">19 June 2014</span>
+                    </li>
+                    <li>
+                        <h2><a href="#">A Blog post with a really really long title <span class="post__category">Javascript</span></a></h2>
+                        <span class="blog__post--date">19 June 2014</span>
+                    </li>
+                    <li>
+                        <h2><a href="#">Blog post <span class="post__category">Javascript</span></a></h2>
+                        <span class="blog__post--date">19 June 2014</span>
+                    </li>
+                    <li>
+                        <h2><a href="#">Blog post <span class="post__category">Drupal</span></a></h2>
+                        <span class="blog__post--date">19 June 2014</span>
+                    </li>
+                    <li>
+                        <h2><a href="#">Blog post <span class="post__category">Javascript</span></a></h2>
+                        <span class="blog__post--date">19 June 2014</span>
+                    </li>
+                    <li>
+                        <h2><a href="#">Blog post <span class="post__category">Tools</span></a></h2>
+                        <span class="blog__post--date">19 June 2014</span>
+                    </li>
+                    <li>
+                        <h2><a href="#">Blog post <span class="post__category">Javascript</span></a></h2>
+                        <span class="blog__post--date">19 June 2014</span>
+                    </li>
+                </ul>
+
+
             </article>
 
 
             <section class="about">
                 <p><a href="https://twitter.com/whostolemyhat" target="_blank" title="Me on Twitter" class="button"><i class="icon twitter"></i>Follow me on Twitter</a>
-                or you can get in touch with me <a href="mailto:hello@jamestease.co.uk" title="Email me" class="button"><i class="icon email"></i>via email</a>.</p>
+                or you can get in touch with me <a href="mailto:hello@jamestease.co.uk" title="Email me" class="button"><i class="icon email"></i>via email</a></p>
             </section>
 
-
-            <div class="spinner">
-                <div class="circle loading--circle1"></div>
-                <div class="circle loading--circle2"></div>
-                <div class="circle loading--circle3"></div>
-                <div class="circle loading--circle4"></div>
-                <div class="circle loading--circle5"></div>
-            </div>
         </main>
 
-        <aside class="categories">
-            <div class="grid">
-                <p>Posted on 12th Feburary 2014 under <a href="#">Javascript</a>.</p>
-                <a href="#">&laquo; View all posts</a>
-            </div>
-        </aside>
+
 
         
         <footer class="footer">
