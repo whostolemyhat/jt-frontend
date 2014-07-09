@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="{% block description %}{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="James Tease">
+
+        <link rel="prefetch" href="/static/img/backgrounds/bg.png">
+        <link rel="prefetch" href="/static/img/backgrounds/project-placeholder.jpg">
+        <link rel="prefetch" href="/static/img/backgrounds/project-banner.jpg">
+        <link rel="prefetch" href="/static/img/backgrounds/zwartevilt.png">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <link rel="stylesheet" href="/static/css/fold.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+
+        {% block css %}{% endblock %}
+    </head>
+    <body class="{% block pageClass %}{% endblock %}">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="header">
+            <nav class="header__container nav">
+                <ul>
+                    <li class="nav__logo"><a href="/" title="Me!">jam<span class="spin-me-right-round spin">e</span>steas<span class="baby-right-round spin">e</span></a></li>
+                    <li><a href="/" title="Homepage">Home <span class="nav__highlight"></span></a></li>
+                    <li><a href="/projects/" title="Homepage">Projects <span class="nav__highlight"></span></a></li>
+                    <li><a href="/blether/" title="Homepage">Blether <span class="nav__highlight"></span></a></li>
+                </ul>
+            </nav>
+            <a href="#" class="nav__mobile-menu">&#x2261;</a>
+        </header>
+
+        {% block content %}{% endblock %}
+        
+        <footer class="footer">
+            <div class="footer__container">
+                <!-- <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sapiente, non, dolorem, dolor consequuntur ratione quam fugit facere dolorum amet quisquam accusantium repellendus corporis inventore modi odio animi nemo dicta?</p> -->
+
+                <div class="shiny footer__links">
+                    <h2>Shiny stuff</h2>
+                    <ul>
+                        <li><a href="http://whostolemyhat.github.io/text-particle/" title="Javascript text particle system">Text Particles</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.whostolemyhat.checkyourself" title="Check Yourself Android app">Check Yourself</a></li>
+                        <li><a href="http://www.todayspollencount.uk" title="Pollen Count site">Today's Pollen Count</a></li>
+                    </ul>
+                </div>
+
+                <div class="wordy footer__links">
+                    <h2>Wordy stuff</h2>
+                    <ul>
+                        {% for post in posts|slice:":3" %}
+                            <li><a href="/blether/{{ post.slug }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="social footer__links">
+                    <h2>Social stuff</h2>
+                    <ul>
+                        <li><a href="https://twitter.com/whostolemyhat" title="Follow me on Twitter" target="_blank"><i class="icon twitter"></i>Twitter</a></li>
+                        <li><a href="http://uk.linkedin.com/pub/james-tease/32/8a0/b04" title="I'm also on LinkedIn" target="_blank"><i class="icon linkedin"></i>LinkedIn</a></li>
+                        <li><a href="https://github.com/whostolemyhat" title="Have a look at my code on Github" target="_blank"><i class="icon github"></i>Github</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+        <script src="/static/js/plugins.js"></script>
+        <script src="/static/js/main.js"></script>
+
+        {% block scripts %}{% endblock %}
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-11627514-2');ga('send','pageview');
+        </script>
+    </body>
+</html>

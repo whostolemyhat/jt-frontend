@@ -26,6 +26,18 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .blog__post__categories {
+        width: 100%;
+        float: none;
+        @include rem(margin-bottom, 2rem);
+    }
+
+    .blog__posts {
+        width: 100%;
+    }
+}
+
 .categories__list {
     @extend %no-style-list;
 
@@ -65,6 +77,7 @@
 
     h1 {
         z-index: 10;
+        line-height: 1;
     }
 
     &:after {
@@ -87,11 +100,14 @@
 
 .blog__meta {
     @include rem('padding', 1rem 0);
-    // background: lighten($candlelight, 10%);
     background: $candlelight;
     @include rem('margin-bottom', 2rem);
 
     p {
         margin: 0;
     }
+}
+
+.blog__article {
+    @include rem(margin-bottom, 1rem);
 }

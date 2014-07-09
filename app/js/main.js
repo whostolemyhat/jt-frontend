@@ -1,8 +1,6 @@
 var app = app || {};
 
 $(document).ready(function() {
-    console.log('Running jQuery version', $.fn.jquery);
-
     app.nav.mobileMenu();
 });
 

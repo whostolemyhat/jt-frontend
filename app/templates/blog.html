@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Blether :: Articles about web development{% endblock %}
+{% block description %}Blether :: Articles about web development by James Tease, a full-stack web developer living in Bristol.{% endblock %}
+{% block pageClass %}blog{% endblock %}
+{% block css %}{% endblock %}
+
+{%block content %}
+	<main class="main">
+
+	    <header class="blog__title clearfix">
+	        <div class="grid">
+	            <h1>Blether</h1>
+	        </div>
+	    </header>
+	
+	    <article class="blog__article grid clearfix">
+	    	<p>Some of my many fascinating writings, mainly on web and app development.</p>
+	    	{% if current %}
+	    		<p>Showing all {{ current }} posts. <a href="/blether" title="Posts from all categories">View all</a>.</p>
+	    	{% endif %}
+
+	    	<aside class="blog__post__categories">
+	    		{% if categories %}
+	    	    <h3>Filter by category</h3>
+
+	    	    <ul class="categories__list">
+
+	    	        <li><a href="/blether" title="All posts">All posts</a></li>
+	    	        {% for category in categories %}
+	    	        	<li><a href="/blether/cat/{{ category.slug }}" title="View all {{ category.title }} posts">{{ category.title }}</a></li>
+	    	        {% endfor %}
+	    	    </ul>
+
+	    	    {% endif %}
+	    	</aside>
+
+	    	{% if posts %}
+		    	<ul class="blog__posts">
+		    	{% for post in posts %}
+
+			    	<li>
+			    	    <h2><a href="/blether/{{ post.slug }}" title="{{ post.title }}">{{ post.title }}&nbsp;<span class="post__category">{{ post.category }}</span></a></h2>
+			    	    <span class="blog__post--date">{{ post.created }}</span>
+			    	</li>
+
+		    	{% endfor %}
+			    </ul>
+
+		    {% else %}
+			    <p>Nothing here!</p>
+			    <p><a href="/blether/" title="All posts">View all posts</a></p>
+		    {% endif %}
+
+	    </article>
+
+	    <section class="about">
+	        <p><a href="https://twitter.com/whostolemyhat" target="_blank" title="Me on Twitter" class="button"><i class="icon twitter"></i>Follow me on Twitter</a>
+	        or you can get in touch with me <a href="mailto:hello@jamestease.co.uk" title="Email me" class="button"><i class="icon email"></i>via email</a></p>
+	    </section>
+	    
+	</main>
+{% endblock %}

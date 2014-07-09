@@ -1,7 +1,7 @@
 .footer {
     @include clearfix();
     // background: url('/img/tile.png') 0 0 repeat $mineShaft;
-    background: url('/img/backgrounds/zwartevilt.png') 0 0 repeat $mineShaft;
+    background: url('../img/backgrounds/zwartevilt.png') 0 0 repeat $mineShaft;
     color: $gallery;
     @include rem('padding', 1rem 0 2rem);
 
@@ -33,6 +33,10 @@
             background-image: url('../img/icons/linkedin.png');
         }
     }
+    
+    h2 {
+        color: $gallery;
+    }
 }
 
 .footer__container {
@@ -40,9 +44,6 @@
     @extend %clearfix;
 }
 
-h2 {
-    color: $gallery;
-}
 
 .footer__links {
     float: left;

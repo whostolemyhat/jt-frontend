@@ -271,14 +271,19 @@ h2 {
   .project {
     width: 50%;
   }
+
+  /* line 62, ../sass/modules/_projects.scss */
+  .home .project {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 780px) {
-  /* line 64, ../sass/modules/_projects.scss */
+  /* line 68, ../sass/modules/_projects.scss */
   .project {
     width: 100%;
   }
 }
-/* line 69, ../sass/modules/_projects.scss */
+/* line 73, ../sass/modules/_projects.scss */
 .project:hover .project__flipper {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -286,7 +291,7 @@ h2 {
   transform: rotateY(180deg);
 }
 
-/* line 73, ../sass/modules/_projects.scss */
+/* line 77, ../sass/modules/_projects.scss */
 .project__front,
 .project__back {
   width: 100%;
@@ -303,7 +308,7 @@ h2 {
   left: 0;
 }
 
-/* line 86, ../sass/modules/_projects.scss */
+/* line 90, ../sass/modules/_projects.scss */
 .project__front {
   z-index: 2;
   background-repeat: no-repeat;
@@ -312,7 +317,7 @@ h2 {
   display: table;
 }
 
-/* line 94, ../sass/modules/_projects.scss */
+/* line 98, ../sass/modules/_projects.scss */
 .project__back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -322,7 +327,7 @@ h2 {
   background: #ffde17;
 }
 
-/* line 101, ../sass/modules/_projects.scss */
+/* line 105, ../sass/modules/_projects.scss */
 .project__flipper {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -337,7 +342,7 @@ h2 {
 }
 
 /* CSS updated */
-/* line 111, ../sass/modules/_projects.scss */
+/* line 115, ../sass/modules/_projects.scss */
 .navWrapper {
   margin: 0 0 1em;
   overflow: auto;
@@ -345,7 +350,7 @@ h2 {
   width: 100%;
 }
 
-/* line 119, ../sass/modules/_projects.scss */
+/* line 123, ../sass/modules/_projects.scss */
 .navWrapper li {
   display: inline-block;
   margin-bottom: 0.5em;
@@ -357,7 +362,7 @@ h2 {
   margin-right: 0.25em;
 }
 
-/* line 124, ../sass/modules/_projects.scss */
+/* line 128, ../sass/modules/_projects.scss */
 .navWrapper a {
   display: block;
   padding:  8px 16px;
@@ -369,14 +374,14 @@ h2 {
   margin: 0 0.5em;
 }
 
-/* line 132, ../sass/modules/_projects.scss */
+/* line 136, ../sass/modules/_projects.scss */
 .navWrapper .selected,
 #projects .navWrapper a:hover {
   background: #d90a1a;
   color: white;
 }
 
-/* line 138, ../sass/modules/_projects.scss */
+/* line 142, ../sass/modules/_projects.scss */
 .projects__title {
   background: url("../img/backgrounds/project-banner.jpg") repeat top left #004ba6;
   padding:  16px 0;
@@ -384,7 +389,7 @@ h2 {
   margin-bottom:  16px;
   margin-bottom: 1em;
 }
-/* line 143, ../sass/modules/_projects.scss */
+/* line 147, ../sass/modules/_projects.scss */
 .projects__title h1 {
   color: white;
 }
@@ -630,7 +635,7 @@ a:hover .post__category {
   margin-bottom:  32px;
   margin-bottom: 2rem;
 }
-/* line 94, ../sass/modules/_blog.scss */
+/* line 93, ../sass/modules/_blog.scss */
 .blog__meta p {
   margin: 0;
 }

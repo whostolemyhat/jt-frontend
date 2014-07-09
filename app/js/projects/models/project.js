@@ -5,7 +5,7 @@ app.Project = Backbone.Model.extend({
         name: 'New Project',
         url: '#',
         desc: '',
-        img: '../img/backgrounds/project-placeholder.jpg',
+        img: '/static/img/backgrounds/project-placeholder.jpg',
         tags: 'None',
         date: '2014-01-24',
         klass: ''

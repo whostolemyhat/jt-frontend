@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}James Tease :: Web and app developer based in Bristol{% endblock %}
+
+{% block description %}Hello, my name is James and I'm a full-stack web developer specialising in frontend and Javascript development. I develop anything digital, including websites, mobile apps on Android and iOS and make games on a variety of platforms.{% endblock %}
+
+{% block pageClass %}home{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block content %}
+        <header class="intro">
+            <h1 class="mega">Hello World!</h1>
+        </header>
+        
+        <main class="main grid">
+            <p>Hello, my name is James and I'm a full-stack web developer specialising in frontend and Javascript development. 
+                I develop anything digital, including websites, mobile apps on Android and iOS and make games on a variety of platforms. 
+                You can <a href="/projects/" title="Take a look at my work">take a look
+             at some of my personal projects here</a>, and read my <a href="blether" title="Read my blog">webish ramblings here</a>.</p>
+
+             <section class="about">
+                 <p><a href="https://twitter.com/whostolemyhat" target="_blank" title="Me on Twitter" class="button"><i class="icon twitter"></i>Follow me on Twitter</a>
+                 or you can get in touch with me <a href="mailto:hello@jamestease.co.uk" title="Email me" class="button"><i class="icon email"></i>via email</a></p>
+             </section>
+
+            <p>In my day job I work with large brand clients, including <strong>RAC</strong>, <strong>Sky</strong>, <strong>Honda</strong>, <strong>Sainsbury's</strong>, <strong>PHS</strong> and <strong>BP</strong>.
+                I'm based in Bristol and currently work at Rockpool Digital as a frontend developer, using technologies such as HTML5, CSS3, Grunt, Sass and Javascript.</p>
+
+            <p>Have a look at a couple of my recent side projects below, or 
+                <a href="/projects" title="Take a look at some of my side projects">take a look at the full list here</a>.</p>
+
+        </main>
+
+        <section class="projects">
+            <article class="project">
+                <div class="project__flipper  project--node project--dark">
+                    <div class="project__front" style="background-image:url('/static/img/projects/pollen/pollen.png');">
+                        <h2 class="project__name">Today's Pollen Count</h2>
+                    </div>
+                    <div class="project__back">
+                        <h3 class="project__name--back">Today's Pollen Count</h3>
+                        <p>Hate hayfever? I made a site so you can quickly find out today's pollen count.</p>
+                        <a href="http://www.todayspollencount.uk" target="_blank" title="Today's Pollen Count" class="button">Take a look</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project__flipper  project--javascript ">
+                    <div class="project__front" style="background-image:url('/static/img/projects/text-particle.jpg');">
+                        <h2 class="project__name">Text Particles</h2>
+                    </div>
+                    <div class="project__back">
+                        <h3 class="project__name--back">Text Particles</h3>
+                        <p>Making a roguelike? You'll need a text-based particle system! :) Written in Javascript and uses HTML5 canvas, creates an explosion effect using only ASCII characters.</p>
+                        <a href="http://whostolemyhat.github.io/text-particle/" target="_blank" title="Text Particles" class="button">Take a look</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
+                <div class="project__flipper  project--android project--dark">
+                    <div class="project__front" style="background-image:url('/static/img/checkyourself/checkyourself.png');">
+                        <h2 class="project__name">Check Yourself!</h2>
+                    </div>
+                    <div class="project__back">
+                        <h3 class="project__name--back">Check Yourself!</h3>
+                        <p>An Android app which reminds you to check your blood sugar after meals.</p>
+                        <a href="https://github.com/whostolemyhat/checkyourself" target="_blank" title="Check Yourself!" class="button">Take a look</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="about">
+            <p><a href="https://twitter.com/whostolemyhat" target="_blank" title="Me on Twitter" class="button"><i class="icon twitter"></i>Follow me on Twitter</a>
+            or you can get in touch with me <a href="mailto:hello@jamestease.co.uk" title="Email me" class="button"><i class="icon email"></i>via email</a></p>
+        </section>
+{% endblock %}
+
+{% block scripts %}{% endblock %}

@@ -1,0 +1,288 @@
+{% extends "base.html" %}
+{% block title %}Projects :: James Tease{% endblock %}
+{% block pageClass %}projects__page{% endblock %}
+
+{% block content %}
+    <main class="main">
+
+        <header class="projects__title clearfix">
+            <div class="grid">
+                <h1>Projects</h1>
+            </div>
+        </header>
+
+        <aside class="projects__meta"></aside>
+            <div class="grid">
+                <p>Here's a selection of side projects I've knocked together in my spare time. 
+                    They range from Android apps to HTML5 games - you can filter the list by using the links below.</p>
+            </div>
+        
+
+        <section id="projects" class="projects">
+            <div class="project__container">
+                <div class="spinner">
+                    <div class="circle loading--circle1"></div>
+                    <div class="circle loading--circle2"></div>
+                    <div class="circle loading--circle3"></div>
+                    <div class="circle loading--circle4"></div>
+                    <div class="circle loading--circle5"></div>
+                </div>
+
+                <noscript>
+
+                    <article class="project">
+                        <div class="project__flipper  project--node project--dark">
+                            <div class="project__front" style="background-image:url('../img/projects/pollen/pollen.png');">
+                                <h2 class="project__name">Today's Pollen Count</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Today's Pollen Count</h3>
+                                <p>Hate hayfever? I made a site so you can quickly find out today's pollen count.</p>
+                                <a href="http://www.todayspollencount.uk" target="_blank" title="Today's Pollen Count" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--javascript ">
+                            <div class="project__front" style="background-image:url('../img/projects/text-particle.jpg');">
+                                <h2 class="project__name">Text Particles</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Text Particles</h3>
+                                <p>Making a roguelike? You'll need a text-based particle system! :) Written in Javascript and uses HTML5 canvas, creates an explosion effect using only ASCII characters.</p>
+                                <a href="http://whostolemyhat.github.io/text-particle/" target="_blank" title="Text Particles" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--android project--dark">
+                            <div class="project__front" style="background-image:url('../img/checkyourself/checkyourself.png');">
+                                <h2 class="project__name">Check Yourself!</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Check Yourself!</h3>
+                                <p>An Android app which reminds you to check your blood sugar after meals.</p>
+                                <a href="https://github.com/whostolemyhat/checkyourself" target="_blank" title="Check Yourself!" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--game project--javascript project--phaser ">
+                            <div class="project__front" style="background-image:url('../img/projects/roguelike.png');">
+                                <h2 class="project__name">Roguelike</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Roguelike</h3>
+                                <p>A simple roguelike game made for Dec's <a href="http://www.onegameamonth.com/" target="_blank">One Game a Month</a>.</p>
+                                <a href="http://whostolemyhat.github.io/roguelike/" target="_blank" title="Roguelike" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--javascript project--dark">
+                            <div class="project__front" style="background-image:url('../img/projects/particles.png');">
+                                <h2 class="project__name">Particle system</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Particle system</h3>
+                                <p>An HTML5 canvas particle system demo.</p>
+                                <a href="http://whostolemyhat.github.io/particle-system/" target="_blank" title="Particle system" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--game project--javascript ">
+                            <div class="project__front" style="background-image:url('../img/projects/tessellate.png');">
+                                <h2 class="project__name">Tessellate</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Tessellate</h3>
+                                <p>Tessellate - a tetris clone written in Javascript. My April entry for <a href="http://www.onegameamonth.com/" target="_blank">One Game a Month</a>.</p>
+                                <a href="/games/tessellate/" target="_blank" title="Tessellate" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--javascript ">
+                            <div class="project__front" style="background-image:url('../img/projects/map-gen.png');">
+                                <h2 class="project__name">Tilemap generator</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Tilemap generator</h3>
+                                <p>An implementation of <a href="http://gamedevelopment.tutsplus.com/tutorials/cave-levels-cellular-automata--gamedev-9664/" target="_blank">Gamedevtut's cave generator</a> I'm using in a game. Creates a random tilemap and exports as JSON.</p>
+                                <a href="http://whostolemyhat.github.io/level-generator" target="_blank" title="Tilemap generator" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--game project--javascript ">
+                            <div class="project__front" style="background-image:url('../img/backgrounds/project-placeholder.jpg');">
+                                <h2 class="project__name">Copycat</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Copycat</h3>
+                                <p>A memory game - repeat the sequence! February entry for <a href="http://www.onegameamonth.com/" target="_blank">One Game a Month</a>.</p><p><a href="/blether/1gam-february-copycat-game" title="Writeup of Copycat project">Writeup of the Copycat project</a> on my blog.</p>
+                                <a href="/games/copycat/" target="_blank" title="Copycat" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--game project--javascript ">
+                            <div class="project__front" style="background-image:url('../img/projects/pewpew-large.png');">
+                                <h2 class="project__name">Pew Pew</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Pew Pew</h3>
+                                <p>An HTML5 shoot-em-up game - my January entry for <a href="http://www.onegameamonth.com/" target="_blank">One Game a Month</a>.</p><p><a href="/blether/one-game-a-month-january-pew-pew" title="Writeup of PewPew project">Writeup of the PewPew project</a> on my blog.</p>
+                                <a href="/games/pewpew/" target="_blank" title="Pew Pew" class="button">Take a look</a>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--game project--javascript project--dark">
+                            <div class="project__front" style="background-image:url('../img/projects/noughts-and-crosses.jpg');">
+                                <h2 class="project__name">Noughts and Crosses</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Noughts and Crosses</h3>
+                                <p>A version of noughts of crosses with simple AI, using Javascript.</p>
+                                <a href="noughts-and-crosses" target="_blank" title="Noughts and Crosses" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--game project--javascript project--dark">
+                            <div class="project__front" style="background-image:url('../img/projects/snake.jpg');">
+                                <h2 class="project__name">Snake</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Snake</h3>
+                                <p>A clone of the game found on old Nokia phones using Javascript and HTML canvas.</p>
+                                <a href="snake" target="_blank" title="Snake" class="button">Take a look</a>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--game project--javascript project--dark">
+                            <div class="project__front" style="background-image:url('../img/projects/pong.jpg');">
+                                <h2 class="project__name">Pong</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Pong</h3>
+                                <p>Pong - hit the ball past your opponent to win points.</p>
+                                <a href="pong" target="_blank" title="Pong" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="project__flipper  project--python project--flask ">
+                            <div class="project__front" style="background-image:url('../img/backgrounds/project-placeholder.jpg');">
+                                <h2 class="project__name">Random Team Generator</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Random Team Generator</h3>
+                                <p>A simple web app which generates random teams from user-submitted names. Built using the Flask framework.</p>
+                                <a href="/projects/team-generator" target="_blank" title="Random Team Generator" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--python project--flask ">
+                            <div class="project__front" style="background-image:url('../img/backgrounds/project-placeholder.jpg');">
+                                <h2 class="project__name">Bookmark application</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Bookmark application</h3>
+                                <p>A (work-in-progress) bookmark site which I wrote to learn about Flask (a very small Python web framework).</p>
+                                <a href="https://github.com/whostolemyhat/bookmarks" target="_blank" title="Bookmark application" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--android ">
+                            <div class="project__front" style="background-image:url('../img/projects/sort-your-life-out/icon.png');">
+                                <h2 class="project__name">Sort Your Life Out!</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Sort Your Life Out!</h3>
+                                <p>An Android to-do list app, designed for simplicity because I was fed up of downloading huge apps which had features I never used. Download from <a href="https://play.google.com/store/apps/details?id=uk.jamestease.todo">Google Play</a>.</p>
+                                <a href="/projects/sort-your-life-out/" target="_blank" title="Sort Your Life Out!" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--python ">
+                            <div class="project__front" style="background-image:url('../img/backgrounds/project-placeholder.jpg');">
+                                <h2 class="project__name">Wiki app</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Wiki app</h3>
+                                <p>The final of <a href="http://www.udacity.com/overview/Course/cs253/CourseRev/apr2012" title="Udacity Web Application Engineering course" target="_blank">Udacity CS253 (Web Application Engineering)</a> was to build a wiki-likeapp using Google App Engine - this is the app I built. Pages can be created and editedonly by logged-in users - you can <a href="http://jt-udacity.appspot.com/signup" title="Sign up for an account" target="_blank">sign up here</a>.</p>
+                                <a href="http://jt-udacity.appspot.com/" target="_blank" title="Wiki app" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__flipper  project--javascript project--php project--dark">
+                            <div class="project__front" style="background-image:url('../img/projects/todo.png');">
+                                <h2 class="project__name">Todo list</h2>
+                            </div>
+                            <div class="project__back">
+                                <h3 class="project__name--back">Todo list</h3>
+                                <p>A to-do list, made to teach myself jQuery and Ajax techniques (ajax loading, drag-and-dropping and inline editing).</p>
+                                <a href="http://www.diminishedseventh.co.uk/labs/todo/" target="_blank" title="Todo list" class="button">Take a look</a>
+                            </div>
+                        </div>
+                    </article>
+                </noscript>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <section class="about">
+        <p><a href="https://twitter.com/whostolemyhat" target="_blank" title="Me on Twitter" class="button"><i class="icon twitter"></i>Follow me on Twitter</a>
+        or you can get in touch with me <a href="mailto:hello@jamestease.co.uk" title="Email me" class="button"><i class="icon email"></i>via email</a></p>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script id="projectTemplate" type="text/template">
+    <div class="project__flipper <% _.each(tags, function(tag) { %> project--<%= tag %><% }); %> <%= klass %>">
+        <div class="project__front" style="background-image:url('<%= img %>');">
+            <h2 class="project__name"><%= name %></h2>
+        </div>
+        <div class="project__back">
+            <h3 class="project__name--back"><%= name %></h3>
+            <%= desc %>
+            <a href="<%= url %>" target="_blank" title="<%= name %>" class="button">Take a look</a>
+            <!--<ul>
+                <% _.each(tags, function(tag) { %><li><%= tag %></li><% }); %>
+            </ul>-->
+        </div>
+    </div>
+</script>
+
+<script src="/static/js/projects/projects.min.js"></script>
+{% endblock %}
