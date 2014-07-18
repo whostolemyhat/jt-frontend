@@ -682,7 +682,7 @@ body {
 /* line 26, ../sass/modules/_layout.scss */
 .intro {
   height: 50%;
-  background: url("/img/backgrounds/bg.png") 0 0 no-repeat transparent;
+  background: url("../img/backgrounds/bg.png") 0 0 no-repeat transparent;
   background-size: cover;
   text-align: center;
   display: table;

@@ -9,7 +9,7 @@
     display: -webkit-flex;
     display: flex;
     flex-flow: row wrap;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .project__container {
@@ -44,7 +44,9 @@
     float: left;
     text-align: center;
     padding: 0;
-    @include perspective(1000);
+
+    // TODO: buggy atm
+    // @include perspective(1000px);
     position: relative;
 }
 
@@ -70,8 +72,12 @@
     }
 }
 
-.project:hover .project__flipper {
+.project:hover .project__front {
     @include transform(rotateY(180deg));
+}
+
+.project:hover .project__back {
+    @include transform(rotateY(0deg));
 }
 
 .project__front,
@@ -79,8 +85,15 @@
     width: 100%;
     min-height: 300px;
     @include backface-visibility(hidden);
-    background-image: url('../img/backgrounds/project-placeholder.jpg');
-    background-color: $cobalt;
+
+    // transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    @include transition(all, 450ms);
 
     position: absolute;
     top: 0;
@@ -88,26 +101,35 @@
 }
 
 .project__front {
-  z-index: 2;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  display: table;
+    background-image: url('../img/backgrounds/project-placeholder.jpg');
+    background-color: $cobalt;
+    z-index: 2;
+    @include transform(rotateY(0deg));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: table;
 }
 
 .project__back {
-  @include transform(rotateY(180deg));
+  @include transform(rotateY(-180deg));
 
   padding: 1em;
   background: $candlelight;
 }
 
 .project__flipper {
+  min-height: 300px;
+
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
   @include transition(all, 450ms);
+  // transition: 0.6s;
+
   position: relative;
 }
 

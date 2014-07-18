@@ -121,7 +121,7 @@
 }
 /* line 1, ../sass/modules/_footer.scss */
 .footer {
-  background: url("/img/backgrounds/zwartevilt.png") 0 0 repeat #222222;
+  background: url("../img/backgrounds/zwartevilt.png") 0 0 repeat #222222;
   color: #efefef;
   padding:  16px 0 32px;
   padding: 1rem 0 2rem;
@@ -168,29 +168,38 @@
 .footer a:hover .linkedin {
   background-image: url("../img/icons/linkedin.png");
 }
-
-/* line 43, ../sass/modules/_footer.scss */
-h2 {
+/* line 37, ../sass/modules/_footer.scss */
+.footer h2 {
   color: #efefef;
 }
 
-/* line 47, ../sass/modules/_footer.scss */
+/* line 48, ../sass/modules/_footer.scss */
 .footer__links {
   float: left;
   width: 32%;
   margin-right: 1%;
 }
 
-/* line 57, ../sass/modules/_footer.scss */
+/* line 58, ../sass/modules/_footer.scss */
 .wordy {
   width: 45%;
 }
 
-/* line 61, ../sass/modules/_footer.scss */
+/* line 62, ../sass/modules/_footer.scss */
 .social {
   width: 20%;
 }
 
+@media only screen and (max-width: 780px) {
+  /* line 66, ../sass/modules/_footer.scss */
+  .footer__links,
+  .social,
+  .wordy {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+}
 /* line 1, ../sass/modules/_projects.scss */
 .projects {
   display: -webkit-box;
@@ -202,7 +211,6 @@ h2 {
   display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
-  overflow: hidden;
 }
 
 /* line 15, ../sass/modules/_projects.scss */
@@ -253,45 +261,49 @@ h2 {
   float: left;
   text-align: center;
   padding: 0;
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -ms-perspective: 1000;
-  perspective: 1000;
   position: relative;
 }
 
 @media only screen and (max-width: 1000px) {
-  /* line 52, ../sass/modules/_projects.scss */
+  /* line 54, ../sass/modules/_projects.scss */
   .project {
     width: 33.2%;
   }
 }
 @media only screen and (max-width: 960px) {
-  /* line 58, ../sass/modules/_projects.scss */
+  /* line 60, ../sass/modules/_projects.scss */
   .project {
     width: 50%;
   }
 
-  /* line 62, ../sass/modules/_projects.scss */
+  /* line 64, ../sass/modules/_projects.scss */
   .home .project {
     width: 100%;
   }
 }
 @media only screen and (max-width: 780px) {
-  /* line 68, ../sass/modules/_projects.scss */
+  /* line 70, ../sass/modules/_projects.scss */
   .project {
     width: 100%;
   }
 }
-/* line 73, ../sass/modules/_projects.scss */
-.project:hover .project__flipper {
+/* line 75, ../sass/modules/_projects.scss */
+.project:hover .project__front {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-/* line 77, ../sass/modules/_projects.scss */
+/* line 79, ../sass/modules/_projects.scss */
+.project:hover .project__back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+/* line 83, ../sass/modules/_projects.scss */
 .project__front,
 .project__back {
   width: 100%;
@@ -301,38 +313,54 @@ h2 {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-image: url("../img/backgrounds/project-placeholder.jpg");
-  background-color: #004ba6;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 450ms ease-in-out;
+  -moz-transition: all 450ms ease-in-out;
+  -ms-transition: all 450ms ease-in-out;
+  -o-transition: all 450ms ease-in-out;
+  transition: all 450ms ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-/* line 90, ../sass/modules/_projects.scss */
+/* line 103, ../sass/modules/_projects.scss */
 .project__front {
+  background-image: url("../img/backgrounds/project-placeholder.jpg");
+  background-color: #004ba6;
   z-index: 2;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   display: table;
 }
 
-/* line 98, ../sass/modules/_projects.scss */
+/* line 114, ../sass/modules/_projects.scss */
 .project__back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
   padding: 1em;
   background: #ffde17;
 }
 
-/* line 105, ../sass/modules/_projects.scss */
+/* line 121, ../sass/modules/_projects.scss */
 .project__flipper {
+  min-height: 300px;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-transition: all 450ms ease-in-out;
   -moz-transition: all 450ms ease-in-out;
   -ms-transition: all 450ms ease-in-out;
@@ -342,7 +370,7 @@ h2 {
 }
 
 /* CSS updated */
-/* line 115, ../sass/modules/_projects.scss */
+/* line 137, ../sass/modules/_projects.scss */
 .navWrapper {
   margin: 0 0 1em;
   overflow: auto;
@@ -350,7 +378,7 @@ h2 {
   width: 100%;
 }
 
-/* line 123, ../sass/modules/_projects.scss */
+/* line 145, ../sass/modules/_projects.scss */
 .navWrapper li {
   display: inline-block;
   margin-bottom: 0.5em;
@@ -362,7 +390,7 @@ h2 {
   margin-right: 0.25em;
 }
 
-/* line 128, ../sass/modules/_projects.scss */
+/* line 150, ../sass/modules/_projects.scss */
 .navWrapper a {
   display: block;
   padding:  8px 16px;
@@ -374,14 +402,14 @@ h2 {
   margin: 0 0.5em;
 }
 
-/* line 136, ../sass/modules/_projects.scss */
+/* line 158, ../sass/modules/_projects.scss */
 .navWrapper .selected,
 #projects .navWrapper a:hover {
   background: #d90a1a;
   color: white;
 }
 
-/* line 142, ../sass/modules/_projects.scss */
+/* line 164, ../sass/modules/_projects.scss */
 .projects__title {
   background: url("../img/backgrounds/project-banner.jpg") repeat top left #004ba6;
   padding:  16px 0;
@@ -389,7 +417,7 @@ h2 {
   margin-bottom:  16px;
   margin-bottom: 1em;
 }
-/* line 147, ../sass/modules/_projects.scss */
+/* line 169, ../sass/modules/_projects.scss */
 .projects__title h1 {
   color: white;
 }
@@ -563,17 +591,31 @@ a:hover .post__category {
   margin: 0 0 0.5rem;
 }
 
-/* line 32, ../sass/modules/_blog.scss */
+@media only screen and (max-width: 768px) {
+  /* line 30, ../sass/modules/_blog.scss */
+  .blog__post__categories {
+    width: 100%;
+    float: none;
+    margin-bottom:  32px;
+    margin-bottom: 2rem;
+  }
+
+  /* line 36, ../sass/modules/_blog.scss */
+  .blog__posts {
+    width: 100%;
+  }
+}
+/* line 44, ../sass/modules/_blog.scss */
 .categories__list a {
   color: #efefef;
 }
-/* line 35, ../sass/modules/_blog.scss */
+/* line 47, ../sass/modules/_blog.scss */
 .categories__list a:hover {
   color: #222222;
   background: transparent;
 }
 
-/* line 43, ../sass/modules/_blog.scss */
+/* line 55, ../sass/modules/_blog.scss */
 .advert {
   background: #eee;
   text-align: center;
@@ -582,12 +624,12 @@ a:hover .post__category {
   margin-bottom:  32px;
   margin-bottom: 2rem;
 }
-/* line 49, ../sass/modules/_blog.scss */
+/* line 61, ../sass/modules/_blog.scss */
 .advert p {
   margin: 0;
 }
 
-/* line 54, ../sass/modules/_blog.scss */
+/* line 66, ../sass/modules/_blog.scss */
 .categories {
   background: #04b53f;
   border-top: 3px solid #04c444;
@@ -595,7 +637,7 @@ a:hover .post__category {
   padding: 1rem;
 }
 
-/* line 60, ../sass/modules/_blog.scss */
+/* line 72, ../sass/modules/_blog.scss */
 .blog__title {
   background: #ffde17;
   position: relative;
@@ -603,11 +645,12 @@ a:hover .post__category {
   padding:  16px 0;
   padding: 1rem 0;
 }
-/* line 66, ../sass/modules/_blog.scss */
+/* line 78, ../sass/modules/_blog.scss */
 .blog__title h1 {
   z-index: 10;
+  line-height: 1;
 }
-/* line 70, ../sass/modules/_blog.scss */
+/* line 83, ../sass/modules/_blog.scss */
 .blog__title:after {
   content: "";
   display: block;
@@ -621,13 +664,13 @@ a:hover .post__category {
   opacity: 0.1;
 }
 
-/* line 84, ../sass/modules/_blog.scss */
+/* line 97, ../sass/modules/_blog.scss */
 .blog .blog__title {
   margin-bottom:  32px;
   margin-bottom: 2rem;
 }
 
-/* line 88, ../sass/modules/_blog.scss */
+/* line 101, ../sass/modules/_blog.scss */
 .blog__meta {
   padding:  16px 0;
   padding: 1rem 0;
@@ -635,9 +678,15 @@ a:hover .post__category {
   margin-bottom:  32px;
   margin-bottom: 2rem;
 }
-/* line 93, ../sass/modules/_blog.scss */
+/* line 106, ../sass/modules/_blog.scss */
 .blog__meta p {
   margin: 0;
+}
+
+/* line 111, ../sass/modules/_blog.scss */
+.blog__article {
+  margin-bottom:  16px;
+  margin-bottom: 1rem;
 }
 
 /* line 1, ../sass/modules/_about.scss */
@@ -661,6 +710,8 @@ a:hover .post__category {
   -o-box-shadow: inset 0 0 0 4px #04c444;
   -ms-box-shadow: inset 0 0 0 4px #04c444;
   box-shadow: inset 0 0 0 4px #04c444;
+  border-bottom: 2px solid #03832e;
+  border-right: 2px solid #03832e;
   background: url("../img/icons/arrow-right.png") right -20px no-repeat #04b53f;
   color: #efefef;
   padding:  8px 16px;
@@ -680,7 +731,7 @@ a:hover .post__category {
   zoom: 1;
   margin-right: 0.25em;
 }
-/* line 12, ../sass/modules/_buttons.scss */
+/* line 14, ../sass/modules/_buttons.scss */
 .button:hover,
 .button:visited:hover {
   background: url("../img/icons/arrow-right.png") right 8px center no-repeat #03832e;
@@ -691,9 +742,11 @@ a:hover .post__category {
   -o-box-shadow: none;
   -ms-box-shadow: none;
   box-shadow: none;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
-/* line 19, ../sass/modules/_buttons.scss */
+/* line 23, ../sass/modules/_buttons.scss */
 .icon {
   display: inline-block;
   width: 16px;
@@ -712,22 +765,22 @@ a:hover .post__category {
   margin-right: 0.25em;
 }
 
-/* line 31, ../sass/modules/_buttons.scss */
+/* line 35, ../sass/modules/_buttons.scss */
 .twitter {
   background-image: url("../img/icons/twitter.png");
 }
 
-/* line 35, ../sass/modules/_buttons.scss */
+/* line 39, ../sass/modules/_buttons.scss */
 .github {
   background-image: url("../img/icons/github.png");
 }
 
-/* line 39, ../sass/modules/_buttons.scss */
+/* line 43, ../sass/modules/_buttons.scss */
 .linkedin {
   background-image: url("../img/icons/linkedin.png");
 }
 
-/* line 43, ../sass/modules/_buttons.scss */
+/* line 47, ../sass/modules/_buttons.scss */
 .email {
   background-image: url("../img/icons/mail.png");
 }
