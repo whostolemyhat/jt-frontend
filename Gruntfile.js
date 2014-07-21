@@ -50,7 +50,7 @@ module.exports = function(grunt) {
                 files: {
                     '<%= app %>/css/main.css': '<%= app %>/sass/main.scss',
                     '<%= app %>/css/fold.css': '<%= app %>/sass/fold.scss',
-                    // '<%= app %>/css/print.css': '<%= app %>/sass/print.scss'
+                    '<%= app %>/css/prism.css': '<%= app %>/sass/prism.css'
                 }
             },
             prod: {
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                 files: {
                     '<%= app %>/build/css/main.css': '<%= app %>/sass/main.scss',
                     '<%= app %>/build/css/fold.css': '<%= app %>/sass/fold.scss',
-                    // '<%= app %>/build/css/print.css': '<%= app %>/sass/print.scss'
+                    '<%= app %>/build/css/prism.css': '<%= app %>/sass/prism.css'
                 }
             }
         },
@@ -69,9 +69,9 @@ module.exports = function(grunt) {
         clean: [ '<%= app %>/build/' ],
 
         tag: {
-            banner: '/* <%= pkg.name %>\n*/' +
-                    '/* v<%= pkg.version %>\n*/' +
-                    '/* <%= pkg.author %>\n*/' +
+            banner: '/* <%= pkg.name %>*/\n' +
+                    '/* v<%= pkg.version %>*/\n' +
+                    '/* <%= pkg.author %>*/\n' +
                     '/* Last updated: <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
 

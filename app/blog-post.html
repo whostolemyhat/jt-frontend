@@ -16,6 +16,7 @@
 
         <link rel="stylesheet" href="/css/fold.css">
         <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/prism.css">
         <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body class="blog__post">
@@ -77,7 +78,75 @@
                     dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
                     nam, hic distinctio esse officiis explicabo dolor ducimus.</p>
 
-                <code>Some code</code>
+                <pre>
+                <code class="language-markup">
+&lt;a href="#">&lt;img src="http://lorempixel.com/400/600" alt="">&lt;/a>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
+dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
+nam, hic distinctio esse officiis explicabo dolor ducimus.&lt;/p>            
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
+dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
+nam, hic distinctio esse officiis explicabo dolor ducimus.&lt;/p>            
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
+dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
+nam, hic distinctio esse officiis explicabo dolor ducimus.&lt;/p>            
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consectetur asperiores vitae alias eligendi tempore, quos, quo, ipsa dolorem numquam 
+dolores velit iste! Minima sit, nulla laborum tempora, itaque, consectetur commodi non animi dolore ullam, fuga. Excepturi quo ipsa obcaecati totam eos 
+nam, hic distinctio esse officiis explicabo dolor ducimus.&lt;/p>
+                </code>
+                </pre>
+
+                <pre>
+                <code class="language-css">
+.about {
+    @include rem('padding-top', 1rem);
+    @include rem('padding-bottom', 1rem);
+
+    p {
+        margin: 0;
+    }
+}
+/* line 194, ../sass/base/_mixins.scss */
+.footer__links ul, .navWrapper, .blog__posts, .categories__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 200, ../sass/base/_mixins.scss */
+.footer__container {
+  max-width: 980px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 980px) {
+  /* line 206, ../sass/base/_mixins.scss */
+  .footer__container {
+    padding:  0 16px;
+    padding: 0 1rem;
+  }
+}
+/* line 212, ../sass/base/_mixins.scss */
+.footer__container:before, .projects:before, .footer__container:after, .projects:after {
+  content: "";
+  display: table;
+}
+/* line 217, ../sass/base/_mixins.scss */
+.footer__container:after, .projects:after {
+  clear: both;
+}
+
+@media print {
+  /* line 2, ../sass/base/_print.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+                </code>
+                </pre>
             </article>
 
 
@@ -114,6 +183,7 @@
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
+        <script src="/js/vendor/prism.js"></script>
 
 
         <script>

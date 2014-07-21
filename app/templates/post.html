@@ -4,6 +4,7 @@
 
 {% block css %}
 <link rel="stylesheet" href="/static/css/prettify.css">
+<link rel="stylesheet" href="/static/css/prism.css">
 {% endblock %}
 
 {%block content %}
@@ -40,11 +41,15 @@
 {% endblock %}
 
 {% block scripts %}
-
+<!--[if gt IE 8]><!--> 
+<script src="/static/js/vendor/prism.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
 <script src="/static/js/libs/google-code-prettify/prettify.js"></script>
 <script>
 $(document).ready(function() {
   prettyPrint();
 });
 </script>
+<!--<![endif]-->
 {% endblock %}
