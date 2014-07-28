@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Tessellate - HTML5 game</title>
+    <meta name="description" content="Tessellate - a Javascript Tetris clone made for One Game a Month">
+    <meta name="author" content="James Tease">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <script src="/static/js/libs/modernizr-2.5.3.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script>window.jQuery || document.write("<script src='/js/libs/jquery-1.7.1.min.js'>\x3C/script>")</script>
+
+    <link rel="stylesheet" href="/static/tessellate/css/main.css">
+
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/projects" title="Projects page">Back to projects page</a>
+        </div>
+        
+    </nav>
+    <div class="main container">
+
+        <div class="hero-unit">
+            <h1>Tessellate</h1>
+        </div>
+
+        <div class="instructions">
+
+            <h2>Instructions</h2>
+            <ul>
+                <li><strong>Up:</strong> rotate piece</li>
+                <li><strong>Right:</strong> move right</li>
+                <li><strong>Left:</strong> move left</li>
+                <li><strong>Down:</strong> drop down</li>
+            </ul>
+
+            <p class="score">
+                Lines: <span class="lines">0</span> <br/>
+                Score: <span class="score">0</span>   
+            </p>
+        </div>
+        
+        <noscript>This game requires Javascript.</noscript>
+        <canvas id="canvas" width="400" height="500"></canvas>
+
+    <div class="message"></div>
+
+
+    <script src="/static/tessellate/js/main.js"></script>
+    <script>
+        var _gaq=[['_setAccount','UA-11627514-2'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+
+</body>
+</html>

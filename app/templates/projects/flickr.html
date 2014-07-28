@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Flickr jQuery demo | James Tease{% endblock %}
+{% block description %}Flickr and Galleria plugin demo{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/projects.css">
+{% endblock %}
+
+{%block content %}
+
+<div id="gallery"></div>
+<script type="text/javascript" src="/static/js/galleria/galleria-1.2.3.min.js"></script>
+<script type="text/javascript" src="/static/js/galleria/themes/classic/galleria.classic.js"></script>
+<script type="text/javascript">
+$().ready(function() {
+    // clear placeholder link to replace with gallery
+    $("#gallery").html("");
+    
+    var feedUrl = "http://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=?"
+      
+    // _m = medium img, _b = large
+    $.getJSON(feedUrl, function(data) {
+        $.each(data.items, function(i, item) {
+            $("<img/>").attr("src", item.media.m.replace("_m", "_b"))
+                .appendTo("#gallery")
+                .wrap('<a href="' + item.link + '" target="_blank"></a>');
+        });
+        
+        $("#gallery").galleria({
+            width:640,
+            height:494,
+            image_crop: "height",
+            autoplay: true
+        });
+    });
+});
+</script>
+
+{% endblock %}
