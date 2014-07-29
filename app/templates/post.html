@@ -3,7 +3,6 @@
 {% block title %}{{post.title }} :: James Tease{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="/static/css/prettify.css">
 <link rel="stylesheet" href="/static/css/prism.css">
 {% endblock %}
 
@@ -16,7 +15,7 @@
         </div>
     </header>
 
-    <aside class="blog__meta">
+    <aside class="blog__meta" role="complementary">
         <div class="grid">
             <p>Posted on {{ post.created }} in <a href="/blether/cat/{{ post.category.slug }}" title="{{ post.category }}">{{ post.category }}</a>.</p>
         </div>
@@ -24,14 +23,14 @@
 
 
 	{% autoescape off %}
-		<article class="blog__article grid">
+		<article class="blog__article grid" role="main">
 			{{ post.content }}
 		</article>			
 	{% endautoescape %}
 </main>
 
 
-<aside class="categories">
+<aside class="categories" role="complementary">
     <div class="grid">
         <p>Posted on {{ post.created }} in <a href="/blether/cat/{{ post.category.slug }}" title="{{ post.category }}">{{ post.category }}</a>.</p>
         <a href="/blether/">&laquo; View all posts</a>

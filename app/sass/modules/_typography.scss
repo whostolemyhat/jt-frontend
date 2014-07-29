@@ -140,3 +140,9 @@ a:active {
 p {
   @include rem('margin', 0 0 1.5rem);
 }
+
+blockquote {
+  margin-left: 0;
+  padding-left: 20px;
+  border-left: 3px solid $monza;
+}

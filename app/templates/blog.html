@@ -3,7 +3,6 @@
 {% block title %}Blether :: Articles about web development{% endblock %}
 {% block description %}Blether :: Articles about web development by James Tease, a full-stack web developer living in Bristol.{% endblock %}
 {% block pageClass %}blog{% endblock %}
-{% block css %}{% endblock %}
 
 {%block content %}
 	<main class="main">
@@ -14,7 +13,7 @@
 	        </div>
 	    </header>
 	
-	    <article class="blog__article grid clearfix">
+	    <article class="blog__article grid clearfix" role="main">
 	    	<p>Some of my many fascinating writings, mainly on web and app development.</p>
 	    	{% if current %}
 	    		<p>Showing all {{ current }} posts. <a href="/blether" title="Posts from all categories">View all</a>.</p>
