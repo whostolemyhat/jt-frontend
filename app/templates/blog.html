@@ -25,7 +25,7 @@
 
 	    	    <ul class="categories__list">
 
-	    	        <li><a href="/blether" title="All posts">All posts</a></li>
+	    	        <li><a href="/blether" title="All posts" class="{{ posts|length }}">All posts</a></li>
 	    	        {% for category in categories %}
 	    	        	<li><a href="/blether/cat/{{ category.slug }}" title="View all {{ category.title }} posts">{{ category.title }}</a></li>
 	    	        {% endfor %}
