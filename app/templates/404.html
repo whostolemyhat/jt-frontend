@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}404 - James Tease{% endblock %}
+{% block title %}Page not found :: James Tease{% endblock %}
 {% block description %}Page not found{% endblock %}
 
 {% block content %}
-<h1>Page not found</h1>
-<p>The page you're looking for doesn't exist.</p>
-<p><a href="/" title="Home">Try again</a></p>
 
+<header class="error__title clearfix">
+    <div class="grid">
+        <h1 class="mega">Page not found</h1>
+    </div>
+</header>
+
+<main class="main grid">
+    <p>The page you're looking for doesn't exist.</p>
+    <p>This is either because of a mis-typed link or a link which is out of date.</p>
+    <p><a href="/" title="Home">Try going back to the site</a>.</p>
+</main>
 {% endblock %}

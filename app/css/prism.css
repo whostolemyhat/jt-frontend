@@ -1,0 +1,201 @@
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+css-extras+clike+javascript+java+php+scss+bash+python&plugins=line-numbers+autolinker+show-language */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+/* line 8, ../sass/prism.css */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f8f8f2;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+/* line 30, ../sass/prism.css */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+/* line 37, ../sass/prism.css */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #272822;
+}
+
+/* Inline code */
+/* line 43, ../sass/prism.css */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 48, ../sass/prism.css */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 55, ../sass/prism.css */
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+/* line 59, ../sass/prism.css */
+.namespace {
+  opacity: .7;
+}
+
+/* line 63, ../sass/prism.css */
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol {
+  color: #f92672;
+}
+
+/* line 70, ../sass/prism.css */
+.token.boolean,
+.token.number {
+  color: #ae81ff;
+}
+
+/* line 75, ../sass/prism.css */
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+  color: #a6e22e;
+}
+
+/* line 83, ../sass/prism.css */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+
+/* line 92, ../sass/prism.css */
+.token.atrule,
+.token.attr-value {
+  color: #e6db74;
+}
+
+/* line 99, ../sass/prism.css */
+.token.keyword {
+  color: #66d9ef;
+}
+
+/* line 103, ../sass/prism.css */
+.token.regex,
+.token.important {
+  color: #fd971f;
+}
+
+/* line 108, ../sass/prism.css */
+.token.important {
+  font-weight: bold;
+}
+
+/* line 112, ../sass/prism.css */
+.token.entity {
+  cursor: help;
+}
+
+/* line 116, ../sass/prism.css */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 122, ../sass/prism.css */
+pre.line-numbers > code {
+  position: relative;
+}
+
+/* line 126, ../sass/prism.css */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 143, ../sass/prism.css */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 149, ../sass/prism.css */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/* line 156, ../sass/prism.css */
+.token a {
+  color: inherit;
+}
+
+/* line 159, ../sass/prism.css */
+pre[class*='language-'] {
+  position: relative;
+}
+
+/* line 162, ../sass/prism.css */
+pre[class*='language-'] > code[data-language] {
+  /*overflow: scroll;*/
+  max-height: 28em;
+  display: block;
+}
+
+/* line 167, ../sass/prism.css */
+pre[class*='language-'] > code[data-language]::before {
+  content: attr(data-language);
+  color: black;
+  background-color: #CFCFCF;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9em;
+  border-radius: 0 0 0 5px;
+  padding: 0 0.5em;
+  text-shadow: none;
+}

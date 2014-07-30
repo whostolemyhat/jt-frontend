@@ -19,7 +19,11 @@
     
     a:hover {
         background: transparent;
-        @include transition(all, 0);
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
 
         .twitter {
             background-image: url('../img/icons/twitter.png');

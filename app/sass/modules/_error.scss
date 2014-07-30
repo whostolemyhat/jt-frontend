@@ -1,0 +1,10 @@
+.error__title {
+    background: $cobalt;
+    @include rem(margin-bottom, 1rem);
+
+    .mega {
+        line-height: 1;
+        @include rem(font-size, 6rem);
+        color: white;
+    }
+}
