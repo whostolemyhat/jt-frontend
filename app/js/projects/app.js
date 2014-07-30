@@ -3,6 +3,14 @@ var app = app || {};
 $(function() {
     app.projects = [
         {
+            "name": "Web app template",
+            "url": "https://github.com/whostolemyhat/app-template",
+            "desc": "<p>My boilerplate template for web apps which I use for almost all my projects. Now available as <a href=\"https://www.npmjs.org/package/generator-wsmh-app\" title=\"App template generator on NPM\" target=\"_blank\">a Yeoman generator on NPM</a>.</p>",
+            "tags": ["node", "javascript"],
+            "date": "2014-07-30",
+            "published": true
+        },
+        {
             "name": "Today's Pollen Count",
             "url": "http://www.todayspollencount.uk",
             "desc": "<p>Hate hayfever? I made a site so you can quickly find out today's pollen count.</p>",
@@ -163,17 +171,7 @@ $(function() {
             "date": "2012-04-30",
             "klass": "project--dark",
             "published": true
-        },
-        // {
-        //     "name": "Balls",
-        //     "url": "balls",
-        //     "desc": "<p>Javascript balls drawn on HTML5 canvas, which bounce around the screen. That's it really.</p>",
-        //     "img": "/static/img/projects/balls.jpg",
-        //     "tags": ["javascript"],
-        //     "klass": "project--dark",
-        //     "date": "2012-01-05",
-        //     "published": true
-        // }
+        }
     ];
 
     new app.ProjectLibraryView(app.projects);

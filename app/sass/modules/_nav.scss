@@ -10,9 +10,7 @@
         text-align: center;
     }
 
-    .nav__logo {
-        text-align: left;
-    }
+    
 
     a,
     a:visited {
@@ -30,15 +28,30 @@
         }
     }
     
-    .nav__logo a {
-        @include inline-block();
-        font-size: $headingGamma;
-        color: $mineShaft;
-        
-        &:hover {
-            color: $linkColour;
+    .nav__logo {
+        text-align: left;
+    
+        a {
+            @include inline-block();
+            font-size: $headingGamma;
+            color: $mineShaft;
+            
+            &:hover {
+                color: $linkColour;
+            }
+        }
+
+        .icon__logo {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url('../img/icons/logo-32.png') center center no-repeat transparent;
+            margin-right: 10px;
+            float: left;
         }
     }
+
+
 }
 
 
