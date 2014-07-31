@@ -10,8 +10,6 @@
         text-align: center;
     }
 
-    
-
     a,
     a:visited {
         color: $linkColour;
@@ -30,6 +28,7 @@
     
     .nav__logo {
         text-align: left;
+        width: 50%;
     
         a {
             @include inline-block();
@@ -53,8 +52,6 @@
 
 
 }
-
-
 
 .nav__highlight {
     display: block;
@@ -85,9 +82,18 @@
             text-align: center;
         }
 
+        a {
+            @include rem(padding, 0.5rem 0);
+        }
+
         .nav__logo {
             text-align: center;
             display: block;
+            width: 100%;
+
+            a {
+                padding: 0;
+            }
         }
     }
 

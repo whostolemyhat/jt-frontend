@@ -40,6 +40,11 @@ body {
     }
 }
 
+.lt-ie9 {
+    .mega {
+        line-height: 120px;
+    }
+}
 
 @media only screen and (max-width: 550px) {
     .mega {
@@ -63,4 +68,16 @@ img {
     width: auto;
     max-width: 100%;
     height: auto;
+}
+
+.browsehappy {
+    background: $candlelight;
+    text-align: center;
+    @include rem(padding, 1rem);
+}
+
+.lt-ie9 {
+    pre {
+        background: $mineShaft;
+    }
 }

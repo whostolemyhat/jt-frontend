@@ -750,23 +750,19 @@ img {
   text-align: center;
 }
 /* line 13, ../sass/modules/_nav.scss */
-.nav .nav__logo {
-  text-align: left;
-}
-/* line 17, ../sass/modules/_nav.scss */
 .nav a,
 .nav a:visited {
   color: #d90a1a;
   display: inline-block;
 }
-/* line 22, ../sass/modules/_nav.scss */
+/* line 18, ../sass/modules/_nav.scss */
 .nav a:hover,
 .nav a:visited:hover {
   background: transparent;
   color: #d90a1a;
   text-decoration: none;
 }
-/* line 27, ../sass/modules/_nav.scss */
+/* line 23, ../sass/modules/_nav.scss */
 .nav a:hover .nav__highlight,
 .nav a:visited:hover .nav__highlight {
   -webkit-transform: scale(1, 1);
@@ -774,7 +770,11 @@ img {
   -ms-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 33, ../sass/modules/_nav.scss */
+/* line 29, ../sass/modules/_nav.scss */
+.nav .nav__logo {
+  text-align: left;
+}
+/* line 32, ../sass/modules/_nav.scss */
 .nav .nav__logo a {
   display: inline-block;
   font-size: 19px;
@@ -786,12 +786,21 @@ img {
   zoom: 1;
   margin-right: 0.25em;
 }
-/* line 38, ../sass/modules/_nav.scss */
+/* line 37, ../sass/modules/_nav.scss */
 .nav .nav__logo a:hover {
   color: #d90a1a;
 }
+/* line 42, ../sass/modules/_nav.scss */
+.nav .nav__logo .icon__logo {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("../img/icons/logo-32.png") center center no-repeat transparent;
+  margin-right: 10px;
+  float: left;
+}
 
-/* line 46, ../sass/modules/_nav.scss */
+/* line 55, ../sass/modules/_nav.scss */
 .nav__highlight {
   display: block;
   height: 3px;
@@ -808,37 +817,43 @@ img {
   transform: scale(0, 1);
 }
 
-/* line 56, ../sass/modules/_nav.scss */
+/* line 65, ../sass/modules/_nav.scss */
 .nav__mobile-menu {
   display: none;
 }
 
 @media only screen and (max-width: 1000px) {
-  /* line 61, ../sass/modules/_nav.scss */
+  /* line 70, ../sass/modules/_nav.scss */
   .nav {
     padding:  0 16px;
     padding: 0 1rem;
   }
 }
+@media only screen and (max-width: 650px) {
+  /* line 77, ../sass/modules/_nav.scss */
+  .nav__link--home {
+    display: none;
+  }
+}
 @media only screen and (max-width: 500px) {
-  /* line 69, ../sass/modules/_nav.scss */
+  /* line 88, ../sass/modules/_nav.scss */
   .nav li {
     display: none;
     width: 100%;
     text-align: center;
   }
-  /* line 75, ../sass/modules/_nav.scss */
+  /* line 94, ../sass/modules/_nav.scss */
   .nav .nav__logo {
     text-align: center;
     display: block;
   }
 
-  /* line 81, ../sass/modules/_nav.scss */
+  /* line 100, ../sass/modules/_nav.scss */
   .nav--active li {
     display: block;
   }
 
-  /* line 85, ../sass/modules/_nav.scss */
+  /* line 104, ../sass/modules/_nav.scss */
   .nav__mobile-menu {
     display: block;
     position: absolute;
@@ -847,28 +862,28 @@ img {
     font-size: 2rem;
     color: #222222;
   }
-  /* line 93, ../sass/modules/_nav.scss */
+  /* line 112, ../sass/modules/_nav.scss */
   .nav__mobile-menu:hover, .nav__mobile-menu.active {
     color: #d90a1a;
     background: transparent;
   }
-  /* line 99, ../sass/modules/_nav.scss */
+  /* line 118, ../sass/modules/_nav.scss */
   .nav__mobile-menu:visited {
     color: #222222;
   }
-  /* line 102, ../sass/modules/_nav.scss */
+  /* line 121, ../sass/modules/_nav.scss */
   .nav__mobile-menu:visited:hover {
     color: #d90a1a;
   }
 }
-/* line 109, ../sass/modules/_nav.scss */
+/* line 128, ../sass/modules/_nav.scss */
 .nav__logo a:hover {
   -webkit-transform: rotate(-10deg) scale(1.2);
   -moz-transform: rotate(-10deg) scale(1.2);
   -ms-transform: rotate(-10deg) scale(1.2);
   transform: rotate(-10deg) scale(1.2);
 }
-/* line 112, ../sass/modules/_nav.scss */
+/* line 131, ../sass/modules/_nav.scss */
 .nav__logo a:hover .spin {
   -webkit-animation: none;
   -moz-animation: none;
@@ -876,7 +891,7 @@ img {
   animation: none;
 }
 
-/* line 117, ../sass/modules/_nav.scss */
+/* line 136, ../sass/modules/_nav.scss */
 .spin {
   -webkit-transform-origin: center 55%;
   -moz-transform-origin: center 55%;
@@ -891,7 +906,7 @@ img {
   transform-style: preserve-3d;
 }
 
-/* line 130, ../sass/modules/_nav.scss */
+/* line 149, ../sass/modules/_nav.scss */
 .spin-me-right-round {
   display: inline-block;
   -webkit-animation: spin 8s 0 infinite ease;
@@ -900,7 +915,7 @@ img {
   animation: spin 8s 0 infinite ease;
 }
 
-/* line 135, ../sass/modules/_nav.scss */
+/* line 154, ../sass/modules/_nav.scss */
 .baby-right-round {
   display: inline-block;
   -webkit-animation: twitch 8s 0 infinite linear;
@@ -910,7 +925,7 @@ img {
 }
 
 @-webkit-keyframes spin {
-  /* line 141, ../sass/modules/_nav.scss */
+  /* line 160, ../sass/modules/_nav.scss */
   from {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -918,7 +933,7 @@ img {
     transform: rotateY(0deg);
   }
 
-  /* line 145, ../sass/modules/_nav.scss */
+  /* line 164, ../sass/modules/_nav.scss */
   to {
     -webkit-transform: rotateY(-360deg);
     -moz-transform: rotateY(-360deg);
@@ -927,7 +942,7 @@ img {
   }
 }
 @-moz-keyframes spin {
-  /* line 141, ../sass/modules/_nav.scss */
+  /* line 160, ../sass/modules/_nav.scss */
   from {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -935,7 +950,7 @@ img {
     transform: rotateY(0deg);
   }
 
-  /* line 145, ../sass/modules/_nav.scss */
+  /* line 164, ../sass/modules/_nav.scss */
   to {
     -webkit-transform: rotateY(-360deg);
     -moz-transform: rotateY(-360deg);
@@ -944,7 +959,7 @@ img {
   }
 }
 @-ms-keyframes spin {
-  /* line 141, ../sass/modules/_nav.scss */
+  /* line 160, ../sass/modules/_nav.scss */
   from {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -952,7 +967,7 @@ img {
     transform: rotateY(0deg);
   }
 
-  /* line 145, ../sass/modules/_nav.scss */
+  /* line 164, ../sass/modules/_nav.scss */
   to {
     -webkit-transform: rotateY(-360deg);
     -moz-transform: rotateY(-360deg);
@@ -961,7 +976,7 @@ img {
   }
 }
 @keyframes spin {
-  /* line 141, ../sass/modules/_nav.scss */
+  /* line 160, ../sass/modules/_nav.scss */
   from {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -969,7 +984,7 @@ img {
     transform: rotateY(0deg);
   }
 
-  /* line 145, ../sass/modules/_nav.scss */
+  /* line 164, ../sass/modules/_nav.scss */
   to {
     -webkit-transform: rotateY(-360deg);
     -moz-transform: rotateY(-360deg);
@@ -978,7 +993,7 @@ img {
   }
 }
 @-webkit-keyframes twitch {
-  /* line 151, ../sass/modules/_nav.scss */
+  /* line 170, ../sass/modules/_nav.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -986,7 +1001,7 @@ img {
     transform: rotate(0deg);
   }
 
-  /* line 155, ../sass/modules/_nav.scss */
+  /* line 174, ../sass/modules/_nav.scss */
   20% {
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
@@ -994,7 +1009,7 @@ img {
     transform: rotate(10deg);
   }
 
-  /* line 159, ../sass/modules/_nav.scss */
+  /* line 178, ../sass/modules/_nav.scss */
   25% {
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
@@ -1002,7 +1017,7 @@ img {
     transform: rotate(-20deg);
   }
 
-  /* line 163, ../sass/modules/_nav.scss */
+  /* line 182, ../sass/modules/_nav.scss */
   40%,
   45% {
     -webkit-transform: rotate(180deg);
@@ -1011,7 +1026,7 @@ img {
     transform: rotate(180deg);
   }
 
-  /* line 168, ../sass/modules/_nav.scss */
+  /* line 187, ../sass/modules/_nav.scss */
   50% {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -1019,7 +1034,7 @@ img {
     transform: rotate(90deg);
   }
 
-  /* line 172, ../sass/modules/_nav.scss */
+  /* line 191, ../sass/modules/_nav.scss */
   65% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1027,7 +1042,7 @@ img {
     transform: rotate(-90deg);
   }
 
-  /* line 176, ../sass/modules/_nav.scss */
+  /* line 195, ../sass/modules/_nav.scss */
   70% {
     -webkit-transform: rotate(-60deg);
     -moz-transform: rotate(-60deg);
@@ -1035,7 +1050,7 @@ img {
     transform: rotate(-60deg);
   }
 
-  /* line 180, ../sass/modules/_nav.scss */
+  /* line 199, ../sass/modules/_nav.scss */
   75% {
     -webkit-transform: rotate(-80deg);
     -moz-transform: rotate(-80deg);
@@ -1043,7 +1058,7 @@ img {
     transform: rotate(-80deg);
   }
 
-  /* line 184, ../sass/modules/_nav.scss */
+  /* line 203, ../sass/modules/_nav.scss */
   85%,
   90% {
     -webkit-transform: rotate(220deg);
@@ -1052,7 +1067,7 @@ img {
     transform: rotate(220deg);
   }
 
-  /* line 189, ../sass/modules/_nav.scss */
+  /* line 208, ../sass/modules/_nav.scss */
   93% {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -1061,7 +1076,7 @@ img {
   }
 }
 @-moz-keyframes twitch {
-  /* line 151, ../sass/modules/_nav.scss */
+  /* line 170, ../sass/modules/_nav.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1069,7 +1084,7 @@ img {
     transform: rotate(0deg);
   }
 
-  /* line 155, ../sass/modules/_nav.scss */
+  /* line 174, ../sass/modules/_nav.scss */
   20% {
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
@@ -1077,7 +1092,7 @@ img {
     transform: rotate(10deg);
   }
 
-  /* line 159, ../sass/modules/_nav.scss */
+  /* line 178, ../sass/modules/_nav.scss */
   25% {
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
@@ -1085,7 +1100,7 @@ img {
     transform: rotate(-20deg);
   }
 
-  /* line 163, ../sass/modules/_nav.scss */
+  /* line 182, ../sass/modules/_nav.scss */
   40%,
   45% {
     -webkit-transform: rotate(180deg);
@@ -1094,7 +1109,7 @@ img {
     transform: rotate(180deg);
   }
 
-  /* line 168, ../sass/modules/_nav.scss */
+  /* line 187, ../sass/modules/_nav.scss */
   50% {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -1102,7 +1117,7 @@ img {
     transform: rotate(90deg);
   }
 
-  /* line 172, ../sass/modules/_nav.scss */
+  /* line 191, ../sass/modules/_nav.scss */
   65% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1110,7 +1125,7 @@ img {
     transform: rotate(-90deg);
   }
 
-  /* line 176, ../sass/modules/_nav.scss */
+  /* line 195, ../sass/modules/_nav.scss */
   70% {
     -webkit-transform: rotate(-60deg);
     -moz-transform: rotate(-60deg);
@@ -1118,7 +1133,7 @@ img {
     transform: rotate(-60deg);
   }
 
-  /* line 180, ../sass/modules/_nav.scss */
+  /* line 199, ../sass/modules/_nav.scss */
   75% {
     -webkit-transform: rotate(-80deg);
     -moz-transform: rotate(-80deg);
@@ -1126,7 +1141,7 @@ img {
     transform: rotate(-80deg);
   }
 
-  /* line 184, ../sass/modules/_nav.scss */
+  /* line 203, ../sass/modules/_nav.scss */
   85%,
   90% {
     -webkit-transform: rotate(220deg);
@@ -1135,7 +1150,7 @@ img {
     transform: rotate(220deg);
   }
 
-  /* line 189, ../sass/modules/_nav.scss */
+  /* line 208, ../sass/modules/_nav.scss */
   93% {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -1144,7 +1159,7 @@ img {
   }
 }
 @-ms-keyframes twitch {
-  /* line 151, ../sass/modules/_nav.scss */
+  /* line 170, ../sass/modules/_nav.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1152,7 +1167,7 @@ img {
     transform: rotate(0deg);
   }
 
-  /* line 155, ../sass/modules/_nav.scss */
+  /* line 174, ../sass/modules/_nav.scss */
   20% {
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
@@ -1160,7 +1175,7 @@ img {
     transform: rotate(10deg);
   }
 
-  /* line 159, ../sass/modules/_nav.scss */
+  /* line 178, ../sass/modules/_nav.scss */
   25% {
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
@@ -1168,7 +1183,7 @@ img {
     transform: rotate(-20deg);
   }
 
-  /* line 163, ../sass/modules/_nav.scss */
+  /* line 182, ../sass/modules/_nav.scss */
   40%,
   45% {
     -webkit-transform: rotate(180deg);
@@ -1177,7 +1192,7 @@ img {
     transform: rotate(180deg);
   }
 
-  /* line 168, ../sass/modules/_nav.scss */
+  /* line 187, ../sass/modules/_nav.scss */
   50% {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -1185,7 +1200,7 @@ img {
     transform: rotate(90deg);
   }
 
-  /* line 172, ../sass/modules/_nav.scss */
+  /* line 191, ../sass/modules/_nav.scss */
   65% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1193,7 +1208,7 @@ img {
     transform: rotate(-90deg);
   }
 
-  /* line 176, ../sass/modules/_nav.scss */
+  /* line 195, ../sass/modules/_nav.scss */
   70% {
     -webkit-transform: rotate(-60deg);
     -moz-transform: rotate(-60deg);
@@ -1201,7 +1216,7 @@ img {
     transform: rotate(-60deg);
   }
 
-  /* line 180, ../sass/modules/_nav.scss */
+  /* line 199, ../sass/modules/_nav.scss */
   75% {
     -webkit-transform: rotate(-80deg);
     -moz-transform: rotate(-80deg);
@@ -1209,7 +1224,7 @@ img {
     transform: rotate(-80deg);
   }
 
-  /* line 184, ../sass/modules/_nav.scss */
+  /* line 203, ../sass/modules/_nav.scss */
   85%,
   90% {
     -webkit-transform: rotate(220deg);
@@ -1218,7 +1233,7 @@ img {
     transform: rotate(220deg);
   }
 
-  /* line 189, ../sass/modules/_nav.scss */
+  /* line 208, ../sass/modules/_nav.scss */
   93% {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -1227,7 +1242,7 @@ img {
   }
 }
 @keyframes twitch {
-  /* line 151, ../sass/modules/_nav.scss */
+  /* line 170, ../sass/modules/_nav.scss */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1235,7 +1250,7 @@ img {
     transform: rotate(0deg);
   }
 
-  /* line 155, ../sass/modules/_nav.scss */
+  /* line 174, ../sass/modules/_nav.scss */
   20% {
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
@@ -1243,7 +1258,7 @@ img {
     transform: rotate(10deg);
   }
 
-  /* line 159, ../sass/modules/_nav.scss */
+  /* line 178, ../sass/modules/_nav.scss */
   25% {
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
@@ -1251,7 +1266,7 @@ img {
     transform: rotate(-20deg);
   }
 
-  /* line 163, ../sass/modules/_nav.scss */
+  /* line 182, ../sass/modules/_nav.scss */
   40%,
   45% {
     -webkit-transform: rotate(180deg);
@@ -1260,7 +1275,7 @@ img {
     transform: rotate(180deg);
   }
 
-  /* line 168, ../sass/modules/_nav.scss */
+  /* line 187, ../sass/modules/_nav.scss */
   50% {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -1268,7 +1283,7 @@ img {
     transform: rotate(90deg);
   }
 
-  /* line 172, ../sass/modules/_nav.scss */
+  /* line 191, ../sass/modules/_nav.scss */
   65% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1276,7 +1291,7 @@ img {
     transform: rotate(-90deg);
   }
 
-  /* line 176, ../sass/modules/_nav.scss */
+  /* line 195, ../sass/modules/_nav.scss */
   70% {
     -webkit-transform: rotate(-60deg);
     -moz-transform: rotate(-60deg);
@@ -1284,7 +1299,7 @@ img {
     transform: rotate(-60deg);
   }
 
-  /* line 180, ../sass/modules/_nav.scss */
+  /* line 199, ../sass/modules/_nav.scss */
   75% {
     -webkit-transform: rotate(-80deg);
     -moz-transform: rotate(-80deg);
@@ -1292,7 +1307,7 @@ img {
     transform: rotate(-80deg);
   }
 
-  /* line 184, ../sass/modules/_nav.scss */
+  /* line 203, ../sass/modules/_nav.scss */
   85%,
   90% {
     -webkit-transform: rotate(220deg);
@@ -1301,7 +1316,7 @@ img {
     transform: rotate(220deg);
   }
 
-  /* line 189, ../sass/modules/_nav.scss */
+  /* line 208, ../sass/modules/_nav.scss */
   93% {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -1973,4 +1988,18 @@ a:hover .post__category {
 /* line 47, ../sass/modules/_buttons.scss */
 .email {
   background-image: url("../img/icons/mail.png");
+}
+
+/* line 1, ../sass/modules/_error.scss */
+.error__title {
+  background: #004ba6;
+  margin-bottom:  16px;
+  margin-bottom: 1rem;
+}
+/* line 5, ../sass/modules/_error.scss */
+.error__title .mega {
+  line-height: 1;
+  font-size:  96px;
+  font-size: 6rem;
+  color: white;
 }

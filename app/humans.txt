@@ -3,11 +3,15 @@
 
 # TEAM
 
-    James Tease -- Frontend dev -- @whostolemyhat
-
+    James Tease (Bristol, UK)
+    hello@jamestease.co.uk
+    Twitter: @whostolemyhat
+    Github: https://github.com/whostolemyhat/
 
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    Standards: HTML5, CSS3
+    Components: Javascript, Backbone, Sass, Django
+    Tools: Sublime Text 2, NPM, Grunt
+    Hosting: Webfaction

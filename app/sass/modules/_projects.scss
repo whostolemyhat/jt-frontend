@@ -170,3 +170,19 @@
     color: white;
   }
 }
+
+
+/* IE fallbacks */
+.ie9,
+.lt-ie9 {
+
+  .project {
+    @include rem(margin-bottom, 1rem);
+    height: 650px;
+
+    &__back,
+    &__front {
+      position: relative;
+    }
+  }
+}
