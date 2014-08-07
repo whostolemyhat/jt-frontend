@@ -161,7 +161,7 @@ pre[class*='language-'] {
 }
 pre[class*='language-'] > code[data-language] {
 	/*overflow: scroll;*/
-	max-height: 28em;
+	max-height: 40em;
 	display: block;
 }
 pre[class*='language-'] > code[data-language]::before {
