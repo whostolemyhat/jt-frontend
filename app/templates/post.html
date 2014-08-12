@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block title %}{{post.title }} :: James Tease{% endblock %}
+{% block twitter %}{{post.title }} :: James Tease{% endblock %}
+{% block facebook %}{{post.title }} :: James Tease{% endblock %}
+
+{% block description %}{{ post.content|striptags|truncatewords:20 }}{% endblock %}
+{% block facebookdesc %}{{ post.content|striptags|truncatewords:20 }}{% endblock %}
+{% block twitterdesc %}{{ post.content|striptags|truncatewords:20 }}{% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="/static/css/prism.css">
