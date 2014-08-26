@@ -1,16 +1,19 @@
-var app = app || {};
+var jt = jt || {};
 
 $(document).ready(function() {
-    app.helpers.jsCheck();
-    app.nav.mobileMenu();
+    jt.helpers.jsCheck();
+    jt.nav.mobileMenu();
 });
 
-app.nav = (function() {
+jt.nav = (function() {
     function mobileMenu() {
-        $('.nav__mobile-menu').click(function(e) {
+        document.querySelector('.nav__mobile-menu').addEventListener('click', function(e) {
             e.preventDefault();
 
-            $('.nav').toggleClass('nav--active');
+            // can't iterate over queryselectorall results
+            [].forEach.call(document.querySelectorAll('.nav'), function(el) {
+                el.classList.toggle('nav--active');
+            });
         });
     }
 
@@ -19,9 +22,11 @@ app.nav = (function() {
     };
 })();
 
-app.helpers = (function() {
+jt.helpers = (function() {
     function jsCheck() {
-        $('html').removeClass('no-js').addClass('js');
+        var bodyClass = document.querySelector('html').classList;
+        bodyClass.remove('no-js');
+        bodyClass.add('js');
     }
 
     return {
