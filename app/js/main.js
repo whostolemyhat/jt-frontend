@@ -1,9 +1,5 @@
 var jt = jt || {};
 
-$(document).ready(function() {
-    jt.helpers.jsCheck();
-    jt.nav.mobileMenu();
-});
 
 jt.nav = (function() {
     function mobileMenu() {
@@ -22,6 +18,7 @@ jt.nav = (function() {
     };
 })();
 
+
 jt.helpers = (function() {
     function jsCheck() {
         var bodyClass = document.querySelector('html').classList;
@@ -33,3 +30,8 @@ jt.helpers = (function() {
         jsCheck: jsCheck
     };
 })();
+
+
+// start everything
+jt.helpers.jsCheck();
+jt.nav.mobileMenu();

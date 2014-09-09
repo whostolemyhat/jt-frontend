@@ -272,6 +272,8 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
 
 <script id="projectTemplate" type="text/template">
     <div class="project__flipper <% _.each(tags, function(tag) { %> project--<%= tag %><% }); %> <%= klass %>">

@@ -161,17 +161,17 @@ $(function() {
             "tags": ["python"],
             "date": "2012-04-30",
             "published": true
-        },
-        {
-            "name": "Todo list",
-            "url": "http://www.diminishedseventh.co.uk/labs/todo/",
-            "desc": "<p>A to-do list, made to teach myself jQuery and Ajax techniques (ajax loading, drag-and-dropping and inline editing).</p>",
-            "img": "/static/img/projects/todo.png",
-            "tags": ["javascript", "php"],
-            "date": "2012-04-30",
-            "klass": "project--dark",
-            "published": true
         }
+        // {
+        //     "name": "Todo list",
+        //     "url": "http://www.diminishedseventh.co.uk/labs/todo/",
+        //     "desc": "<p>A to-do list, made to teach myself jQuery and Ajax techniques (ajax loading, drag-and-dropping and inline editing).</p>",
+        //     "img": "/static/img/projects/todo.png",
+        //     "tags": ["javascript", "php"],
+        //     "date": "2012-04-30",
+        //     "klass": "project--dark",
+        //     "published": true
+        // }
     ];
 
     new app.ProjectLibraryView(app.projects);
