@@ -170,3 +170,12 @@ blockquote {
   padding-left: 20px;
   border-left: 3px solid $monza;
 }
+
+
+code {
+  padding: 2px 4px;
+  background: #fff4f5;
+  color: #monza;
+  font-family: Consolas, Menlo, Monaco, 'Deja Vu Sans Mono', 'Courier New', monospace;
+  white-space: nowrap;
+}

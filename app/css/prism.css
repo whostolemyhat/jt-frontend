@@ -22,12 +22,14 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  background: transparent;
+  padding: 0;
 }
 
 /* Code blocks */
 /* line 30, ../sass/prism.css */
 pre[class*="language-"] {
-  padding: 1em;
+  padding: 1em 1em 1.8em;
   margin: .5em 0;
   overflow: auto;
   border-radius: 0.3em;
