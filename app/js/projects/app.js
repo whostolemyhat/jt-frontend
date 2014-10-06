@@ -153,7 +153,7 @@ $(function() {
             "name": "Wiki app",
             "url": "http://jt-udacity.appspot.com/",
             "desc": "<p>The final of <a href=\"http://www.udacity.com/overview/Course/cs253/CourseRev/apr2012\" title=\"Udacity Web Application Engineering course\" target=\"_blank\">Udacity CS253 (Web Application Engineering)</a> was to build a wiki-like" +
-                    "app using Google App Engine - this is the app I built. Pages can be created and edited" +
+                    "app using Google App Engine - this is the app I built. Pages can be created and edited " +
                     "only by logged-in users - you can " +
                     "<a href=\"http://jt-udacity.appspot.com/signup\" title=\"Sign up for an account\" target=\"_blank\">sign up here</a>." +
                 "</p>",

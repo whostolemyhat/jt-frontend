@@ -32,6 +32,21 @@ jt.helpers = (function() {
 })();
 
 
+// jt.projects = (function() {
+//     function flipToggle() {
+//         document.querySelector('.project').addEventListener('click', function(e) {
+//             e.preventDefault();
+
+//             this.classList.toggle('flip');
+//         });
+//     }
+
+//     return {
+//         flipToggle: flipToggle
+//     };
+// })();
+
 // start everything
 jt.helpers.jsCheck();
 jt.nav.mobileMenu();
+// jt.projects.flipToggle();
