@@ -21,6 +21,16 @@ $(function() {
             "published": true
         },
         {
+            "name": "World Cup sweepstake tracker",
+            "url": "http://worldcup-sweepstake.herokuapp.com/",
+            "desc": "<p>A little Node/Backbone app to keep track of the office's World Cup sweepstake.</p>",
+            "tags": ["node", "javascript", "backbone"],
+            "img": "/static/img/projects/world-cup.jpg",
+            "klass": "project--dark",
+            "date": "2014-06-16",
+            "published": true
+        },
+        {
             "name": "Text Particles",
             "url": "http://whostolemyhat.github.io/text-particle/",
             "desc": "<p>Making a roguelike? You'll need a text-based particle system! :) Written in Javascript and uses HTML5 canvas, creates an explosion effect using only ASCII characters.</p>",
