@@ -162,6 +162,7 @@ We now need to find the data in the HTML we've scraped from the BBC site. Inspec
 	app.get('/scrape', function(req, res) {
 		
 		// this is the BBC Weather site for Bristol
+		// replace this with the correct URL for your area
 	    var url = 'http://www.bbc.co.uk/weather/2654675';
 		
 	    var json = { count: '' };
@@ -172,7 +173,8 @@ We now need to find the data in the HTML we've scraped from the BBC site. Inspec
 			// make sure that there weren't any problems
 	        if(!error) {
 				
-	            // cheerio allows us to interact with the opened site much like jQuery
+	            // cheerio allows us to interact with the
+	            // scraped site much like jQuery
 	            var $ = cheerio.load(html);
 
 				// we can now find the pollen data using Cheerio
@@ -184,6 +186,7 @@ We now need to find the data in the HTML we've scraped from the BBC site. Inspec
 				
 				// this will appear on the site
 	            res.send('Updated pollen count.');
+	            
 	        } else {
 				
 				// if there was a problem, display what it was
@@ -203,7 +206,7 @@ If you run `node server.js` again, you should now see the pollen count in the te
 
 
 ##Saving the data
-We're going to run this site on [Heroku](https://www.heroku.com/), which is a great platform for deploying and running apps, and has a free tier as well :) However, you can't save local files on Heroku, so we'll save the JSON data on Amazon's S3 service (which also has a free tier). S3 is a cloud platform where you can store and access files, and we'll use this to store our pollen data JSON file and as a place to read this data in to display to users.
+We're going to run this site on [Heroku](https://www.heroku.com/), which is a great platform for deploying and running apps, and has a free tier as well :) However, you can't save local files on Heroku, so we'll need to save the JSON data on Amazon's S3 service (which also has a free tier). S3 is a cloud platform where you can store and access files, and we'll use this to store our pollen data JSON file and as a place to read this data in to display to users.
 
 [Sign up for an S3 account](http://aws.amazon.com/s3/), then create a bucket (Amazon's name for a folder) which we'll use to save data in. S3 can be a bit confusing, and I don't want to go into too much depth here since I'll be here forever, but there are plenty of tutorials around which explain how to use it. Make sure you save your Access Key ID and Secret Access Key since we'll be using these to access our data.
 
@@ -232,6 +235,8 @@ Make sure you include the double quotes around the key. If you're using OSX or L
 
 	$ export AWS_ACCESS_KEY_ID=[ your key here ]
 	$ export AWS_SECRET_ACCESS_KEY=[ your key here ]
+
+These commands set variables on your machine which are used by the AWS SDK code to access your S3 bucket. When we come to deploy our app, you'll need to add these details to the production environment as well (I'll cover that in a bit).
 
 Ok, code time! run `npm install --save aws-sdk` to install the AWS module which will allow us to interact with our bucket, then update `server.js`:
 
@@ -298,7 +303,7 @@ Ok, code time! run `npm install --save aws-sdk` to install the AWS module which 
 	
 	exports = module.exports = app;
 
-Ok, run `node server.js` again and - hopefully - you will now see a JSON file appear in your S3 bucket! This is the part where I had most issues - if you can't write to the bucket then check your permission settings, or look into the error logged in the terminal.
+Run `node server.js` again and - hopefully - you will now see a JSON file appear in your S3 bucket! **This is the part where I had most issues** - if you can't write to the bucket then check your permission settings in AWS, make sure you've set your environment variables correctly, or look into the error logged in the terminal.
 
 Node scrape
 BBC
@@ -307,6 +312,20 @@ Save to AWS
 Cache, headers
 
 ##Deploying
+
+We're going to deploy out app to Heroku, so you'll need to [sign up for an account](https://id.heroku.com/signup/www-header) (it's free!). Once you've signed up, you need to install the []Heroku Toolbelt](https://toolbelt.heroku.com/) which contains a command-line API for uploading and updating apps on Heroku. After installing, run `heroku` in the terminal to make sure everything's installed properly:
+
+![image](pollen/heroku-terminal.png)
+
+Now run `heroku login` - this will prompt you to enter the email and password you've just signed up with, and will create a new public key if you don't have one already, allowing you to deploy the app from the terminal.
+
+Now create a new app in Heroku - the easiest way is through the Heroku site. Log in, and under 'Apps' click the 'Create new' link.
+
+![image](pollen/create-app.png)
+
+Back in the terminal, in the app folder, run `heroku git:remote -a [your app name]` - this adds a git remote which allows you to deploy to Heroku using Git.
+
+
 Heroku
 
 For hosting we'll use the following (no need to install anything at the moment):
@@ -322,3 +341,4 @@ Minify +  concat (grunt)
 
 ##Resources
 http://scotch.io/tutorials/javascript/scraping-the-web-with-node-js
+https://devcenter.heroku.com/articles/git

@@ -30,6 +30,16 @@ $(function() {
             "published": true
         },
         {
+            "name": "World Cup sweepstake tracker",
+            "url": "http://worldcup-sweepstake.herokuapp.com/",
+            "desc": "<p>A little Node/Backbone app to keep track of the office's World Cup sweepstake.</p>",
+            "tags": ["node", "javascript", "backbone"],
+            "img": "/static/img/projects/world-cup.jpg",
+            "klass": "project--dark",
+            "date": "2014-06-16",
+            "published": true
+        },
+        {
             "name": "Text Particles",
             "url": "http://whostolemyhat.github.io/text-particle/",
             "desc": "<p>Making a roguelike? You'll need a text-based particle system! :) Written in Javascript and uses HTML5 canvas, creates an explosion effect using only ASCII characters.</p>",
@@ -162,7 +172,7 @@ $(function() {
             "name": "Wiki app",
             "url": "http://jt-udacity.appspot.com/",
             "desc": "<p>The final of <a href=\"http://www.udacity.com/overview/Course/cs253/CourseRev/apr2012\" title=\"Udacity Web Application Engineering course\" target=\"_blank\">Udacity CS253 (Web Application Engineering)</a> was to build a wiki-like" +
-                    "app using Google App Engine - this is the app I built. Pages can be created and edited" +
+                    "app using Google App Engine - this is the app I built. Pages can be created and edited " +
                     "only by logged-in users - you can " +
                     "<a href=\"http://jt-udacity.appspot.com/signup\" title=\"Sign up for an account\" target=\"_blank\">sign up here</a>." +
                 "</p>",
@@ -170,17 +180,17 @@ $(function() {
             "tags": ["python"],
             "date": "2012-04-30",
             "published": true
-        },
-        {
-            "name": "Todo list",
-            "url": "http://www.diminishedseventh.co.uk/labs/todo/",
-            "desc": "<p>A to-do list, made to teach myself jQuery and Ajax techniques (ajax loading, drag-and-dropping and inline editing).</p>",
-            "img": "/static/img/projects/todo.png",
-            "tags": ["javascript", "php"],
-            "date": "2012-04-30",
-            "klass": "project--dark",
-            "published": true
         }
+        // {
+        //     "name": "Todo list",
+        //     "url": "http://www.diminishedseventh.co.uk/labs/todo/",
+        //     "desc": "<p>A to-do list, made to teach myself jQuery and Ajax techniques (ajax loading, drag-and-dropping and inline editing).</p>",
+        //     "img": "/static/img/projects/todo.png",
+        //     "tags": ["javascript", "php"],
+        //     "date": "2012-04-30",
+        //     "klass": "project--dark",
+        //     "published": true
+        // }
     ];
 
     new app.ProjectLibraryView(app.projects);

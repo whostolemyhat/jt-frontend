@@ -111,11 +111,18 @@
 .blog__article {
     @include rem(margin-bottom, 1rem);
 
-    p {
+    p,
+    ol,
+    ul {
         max-width: 640px;
     }
 
     img {
         margin: 1em auto 1em 0;
     }
+
+    li {
+      @include rem(margin-bottom, 1rem); 
+    }
+
 }

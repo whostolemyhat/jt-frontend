@@ -22,12 +22,14 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  background: transparent;
+  padding: 0;
 }
 
 /* Code blocks */
 /* line 30, ../sass/prism.css */
 pre[class*="language-"] {
-  padding: 1em;
+  padding: 1em 1em 1.8em;
   margin: .5em 0;
   overflow: auto;
   border-radius: 0.3em;
@@ -181,7 +183,7 @@ pre[class*='language-'] {
 /* line 162, ../sass/prism.css */
 pre[class*='language-'] > code[data-language] {
   /*overflow: scroll;*/
-  max-height: 28em;
+  max-height: 40em;
   display: block;
 }
 
@@ -199,3 +201,5 @@ pre[class*='language-'] > code[data-language]::before {
   padding: 0 0.5em;
   text-shadow: none;
 }
+
+/*# sourceMappingURL=prism.css.map */

@@ -1,17 +1,16 @@
-var app = app || {};
+var jt = jt || {};
 
-$(document).ready(function() {
     console.log('Yes I know the images are massive and not sprited yet :P');
-    app.helpers.jsCheck();
-    app.nav.mobileMenu();
-});
 
-app.nav = (function() {
+jt.nav = (function() {
     function mobileMenu() {
-        $('.nav__mobile-menu').click(function(e) {
+        document.querySelector('.nav__mobile-menu').addEventListener('click', function(e) {
             e.preventDefault();
 
-            $('.nav').toggleClass('nav--active');
+            // can't iterate over queryselectorall results
+            [].forEach.call(document.querySelectorAll('.nav'), function(el) {
+                el.classList.toggle('nav--active');
+            });
         });
     }
 
@@ -20,12 +19,35 @@ app.nav = (function() {
     };
 })();
 
-app.helpers = (function() {
+
+jt.helpers = (function() {
     function jsCheck() {
-        $('html').removeClass('no-js').addClass('js');
+        var bodyClass = document.querySelector('html').classList;
+        bodyClass.remove('no-js');
+        bodyClass.add('js');
     }
 
     return {
         jsCheck: jsCheck
     };
 })();
+
+
+// jt.projects = (function() {
+//     function flipToggle() {
+//         document.querySelector('.project').addEventListener('click', function(e) {
+//             e.preventDefault();
+
+//             this.classList.toggle('flip');
+//         });
+//     }
+
+//     return {
+//         flipToggle: flipToggle
+//     };
+// })();
+
+// start everything
+jt.helpers.jsCheck();
+jt.nav.mobileMenu();
+// jt.projects.flipToggle();

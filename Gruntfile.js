@@ -69,9 +69,9 @@ module.exports = function(grunt) {
         clean: [ '<%= app %>/build/' ],
 
         tag: {
-            banner: '/* <%= pkg.name %>*/\n' +
-                    '/* v<%= pkg.version %>*/\n' +
-                    '/* <%= pkg.author %>*/\n' +
+            banner: '/* <%= pkg.name %> */\n' +
+                    '/* v<%= pkg.version %> */\n' +
+                    '/* <%= pkg.author %> */\n' +
                     '/* Last updated: <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
 
