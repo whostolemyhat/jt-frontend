@@ -3,6 +3,15 @@ var app = app || {};
 $(function() {
     app.projects = [
         {
+            "name": "Pairs game",
+            "url": "/games/pairs/",
+            "desc": "<p>Find the pairs of shapes in the fewest moves possible to win.</p>",
+            "tags": ["game", "javascript", "phaser"],
+            "date": "2014-12-15",
+            "img": "/static/img/projects/pairs.png",
+            "published": true
+        },
+        {
             "name": "Web app template",
             "url": "https://github.com/whostolemyhat/app-template",
             "desc": "<p>My boilerplate template for web apps which I use for almost all my projects. Now available as <a href=\"https://www.npmjs.org/package/generator-wsmh-app\" title=\"App template generator on NPM\" target=\"_blank\">a Yeoman generator on NPM</a>.</p>",

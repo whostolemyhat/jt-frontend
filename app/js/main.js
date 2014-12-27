@@ -1,6 +1,7 @@
 var app = app || {};
 
 $(document).ready(function() {
+    console.log('Yes I know the images are massive and not sprited yet :P');
     app.helpers.jsCheck();
     app.nav.mobileMenu();
 });
