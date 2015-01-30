@@ -82,7 +82,12 @@ Add the following code:
 	var port = process.env.PORT || 3000;
 	
 	var app = express();
-
+	app.use(express.static(__dirname + '/public'));
+	
+	app.get('/', function(req, res) {
+		res.render('index'); // this serves the frontend of the app
+	});
+		
 	app.get('/scrape', function(req, res) {
 
 		// this is where we'll do all the scraping
@@ -94,6 +99,66 @@ Add the following code:
 	console.log('Listening on port ' + port);
 	
 	exports = module.exports = app;
+
+##Create the frontend
+`app.use(express.static(__dirname + '/public'));` tells Express to look in a folder called `public` for all static files to serve. The following code tells Express to look for a file called /public/index.html when someone requests the root of the site (ie the homepage):
+
+	app.get('/', function(req, res) {
+		res.render('index');
+	});
+
+Create a folder called `public` in the root of your app - this will contain all the frontend code for the site. In the `public` folder, create an `index.html` file, which will be served as the homepage, and folders for JS and CSS:
+
+	app/
+	|-public/
+	|    |-css/
+	|    |-js/
+	|    |-index.html
+	|-server.js
+	|-package.json
+	
+Edit the `index.html` file so we've got a basic layout:
+
+	<!DOCTYPE html>
+	<html>
+	    <head>
+	        <meta charset="utf-8">
+	        <title>Today's Pollen Count</title>
+	        <meta name="description" content="My lovely pollen count site">
+	        <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	        <link rel="stylesheet" href="/css/main.css">
+	    </head>
+	    <body>
+	
+	        <main class="main">
+	            <p>Today's pollen count is</p>
+	            <h1 class="mega"></h1>
+	        </main>
+	
+	        <script defer src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	        <script defer src="/js/main.js"></script>
+	    </body>
+	</html>
+
+Create the `main.css` file in the CSS folder, and add the following basic styles:
+	body,
+	html {
+		background: #e5137a; /* hot pink */
+	}
+	.main {
+		width: 80%;
+		margin: auto;
+		color: white;
+		text-align: center;
+	}
+	.mega {
+		font-size: 3em;
+	}
+
+(the full Sass source code is on [the Github repo](https://github.com/whostolemyhat/pollencount) if you want something a bit fancier).
+
+The `<h1 class="mega"></h1>` tag is where we'll display the pollen count - we'll load the data through AJAX and add it to the H1 tag. However, we don't have this data yet, so let's get onto the scraping!
 
 ##Scraping fun
 Now we've got all the boring setup out of the way, let's implement the scraping part.
@@ -179,6 +244,9 @@ We now need to find the data in the HTML we've scraped from the BBC site. Inspec
 
 				// we can now find the pollen data using Cheerio
 	            json.count =  $('.pollen-index .value').text();
+	            if(!json.count) {
+                	json.count = 'Low';
+        	    }
 	            json.date = new Date();
 	
 				// show what we've got so far in the terminal
@@ -203,8 +271,6 @@ We now need to find the data in the HTML we've scraped from the BBC site. Inspec
 
 If you run `node server.js` again, you should now see the pollen count in the terminal!
 
-
-
 ##Saving the data
 We're going to run this site on [Heroku](https://www.heroku.com/), which is a great platform for deploying and running apps, and has a free tier as well :) However, you can't save local files on Heroku, so we'll need to save the JSON data on Amazon's S3 service (which also has a free tier). S3 is a cloud platform where you can store and access files, and we'll use this to store our pollen data JSON file and as a place to read this data in to display to users.
 
@@ -224,7 +290,7 @@ When you've created a bucket, highlight the bucket and click on the `Properties`
 	    </CORSRule>
 	</CORSConfiguration>
 
-**This will allow any site to alter files if they have the correct username and password, so once your site is live, make sure you alter the AllowedOrigin line to just have your domain name**.
+**This will allow any site to alter files if they have the correct username and password, so make sure you alter the AllowedOrigin line to just have your domain name. To allow localhost, you'll need to keep the AllowedOrigin set to '*' for now, but remember to alter this when you go live**.
 
 Got your Access Key ID and Secret Access Key handy? If not, find them, because we need them now to set our local environment variables - these will allow us to interact with our S3 bucket while running the site locally. Setting these variables depends on which OS you're running - for Windows, open Powershell and run
 
@@ -281,7 +347,7 @@ Ok, code time! run `npm install --save aws-sdk` to install the AWS module which 
 	                ACL: 'public-read',
 	            };
 	
-				// and finally, write the file to AWS
+		// and finally, write the file to AWS
 	            s3.putObject(params, function(err, data) {
 	                if (err) {
 	                    console.log(err);
@@ -303,42 +369,70 @@ Ok, code time! run `npm install --save aws-sdk` to install the AWS module which 
 	
 	exports = module.exports = app;
 
-Run `node server.js` again and - hopefully - you will now see a JSON file appear in your S3 bucket! **This is the part where I had most issues** - if you can't write to the bucket then check your permission settings in AWS, make sure you've set your environment variables correctly, or look into the error logged in the terminal.
+Run `node server.js` again and - hopefully - you will now see a JSON file appear in your S3 bucket! **This is the part where I had most issues** - if you can't write to the bucket then check your permission settings in AWS, make sure you've set your environment variables correctly, or look into the error logged in the terminal. Now, every time you go to the /scrape page of your site, you'll create a new JSON file and save it to AWS. This is the key part to automating the pollen data scraping - more on this later.
 
-Node scrape
-BBC
-Met Office API
-Save to AWS
-Cache, headers
+##Hooking up
+Now we've got our data saved to AWS, it'd be pretty handy to be able to display it to the user. Open `public/js/main.js` and add the following:
+
+	$(document).ready(function() {
+		
+		// find the URL of your JSON file on AWS - it'll be in your bucket
+		// and look something like https://s3-eu-west-1.amazonaws.com/[bucket name]/pollen.json
+		// we load the JSON file using jQuery's AJAX
+		$.get([Your AWS pollen.json file])
+		
+		// Once we have the data, we parse it to find the pollen count
+		.done(function(data) {
+			data = JSON.parse(data);
+			var pollen = data.count;
+			
+			// update the <h1 class="mega"> with the pollen count
+			$('.mega').text(pollen);
+		}
+		
+		// if we couldn't get the data from AWS, display an error message
+		.fail(function() {
+			$('.mega').text('Unknown');
+			$('.main').append('<p>Refresh to try again</p>');
+		})
+		
+		.always(function() {
+			// if you're using a loading gif, this is where you'd hide it
+		});
+	}
+	
+Hopefully this is fairly self-explanatory - we wait until the page has loaded (`$(document).ready()`), load our AWS JSON file (`$.get()`) and then update the page with the pollen count (`.done()`). If there was an error getting the JSON data from AWS, then this is handled in the `.fail()` function, and any tidying up we need to do is in the `.always()` function (if you wanted to hide a loading gif, then you'd do it there). Your JSON file URL should look something like https://s3-eu-west-1.amazonaws.com/[Your bucket name]/pollen.json, depending on which AWS server you're using.
+
+Now, if you run `node server.js` and open your browser to `localhost:3000`, you should see the pollen count loaded from AWS! If there are any problems, check the web developer tools in the browser (F12) to see if there are any errors - common problems include CORS restrictions (ie your JSON file on AWS hasn't been configured to allow your `localhost` domain to retrieve it).
 
 ##Deploying
 
-We're going to deploy out app to Heroku, so you'll need to [sign up for an account](https://id.heroku.com/signup/www-header) (it's free!). Once you've signed up, you need to install the []Heroku Toolbelt](https://toolbelt.heroku.com/) which contains a command-line API for uploading and updating apps on Heroku. After installing, run `heroku` in the terminal to make sure everything's installed properly:
+We're going to deploy our app to Heroku, so you'll need to [sign up for an account](https://id.heroku.com/signup/www-header) (it's free!). Once you've signed up, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) which contains a command-line API for uploading and updating apps on Heroku. After installing, run `heroku` in the terminal to make sure everything's installed properly:
 
 ![image](pollen/heroku-terminal.png)
 
-Now run `heroku login` - this will prompt you to enter the email and password you've just signed up with, and will create a new public key if you don't have one already, allowing you to deploy the app from the terminal.
+and then run `heroku login`, which will prompt you to enter your email and password, and will create a new public key if you don't have one already, allowing you to deploy the app from the terminal.
 
-Now create a new app in Heroku - the easiest way is through the Heroku site. Log in, and under 'Apps' click the 'Create new' link.
+Now create a new app in Heroku - either through the Heroku site from the dashboard or via the terminal: `heroku apps:create [your app name]`, then run `heroku apps` and make sure that your new app appears in the list. Commit everything in git:
+
+    git add -A
+    git commit -m "Added AWS integration"
+    
 
 ![image](pollen/create-app.png)
 
-Back in the terminal, in the app folder, run `heroku git:remote -a [your app name]` - this adds a git remote which allows you to deploy to Heroku using Git.
+Back in the terminal, in the app folder, run `heroku git:remote -a [your app name]` This adds a Git remote branch on the Heroku server, which is used to push all your code to the live environment. Now, the moment of truth! Run `git push heroku master`, which will upload your code to Heroku, install any dependencies and start the server. 
 
+If everything went well, you'll be shown the live URL of your app in the terminal:
 
-Heroku
+![image](pollen/heroku.png)
 
-For hosting we'll use the following (no need to install anything at the moment):
+and then visit the site to check it's all working properly! You should see your pollen count on the homepage (if not, check for errors in the dev tools console and make sure that AWS has your Heroku domain added in the CORS policy). You'll need to make sure that /scrape gets visited at least once a day to keep your pollen count data up-to-date - you could set a cron job on a Raspberry Pi (which is what I do!), or there are various sites which ping URLs automatically.
 
-- [Heroku](https://www.heroku.com/)
-- [Amazon S3](http://aws.amazon.com/s3/)
+##Next steps
+This is a fairly basic tutorial, so there are plenty of areas to improve:
 
-##Performance
-Page Insights
-Gzip (node)
-CSS in body
-Minify +  concat (grunt)
-
-##Resources
-http://scotch.io/tutorials/javascript/scraping-the-web-with-node-js
-https://devcenter.heroku.com/articles/git
+- Scraping is inherently problematic for getting data: if the site you're scraping changes it's markup then it could break your scraper. In fact, the BBC site where I'm getting the data only shows pollen counts around May - September, so there is no source of data for the rest of the year! It'd be better to use a stable API, for instance the Met Office's, if they ever get around to opening access to it.
+- This tutorial only contains very basic CSS, so there's loads of improvements to be made there.
+- We haven't set any caching headers on the JSON file saved to AWS, so browsers won't cache it for as long as they could. This means that every time we load the page, we're requesting a new copy of the file even if it hasn't changed.
+- Frontend performance could be improved by enabling Gzip, compressing the CSS and JS etc.
